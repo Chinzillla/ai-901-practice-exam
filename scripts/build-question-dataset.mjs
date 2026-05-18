@@ -163,7 +163,7 @@ function parseQuestionBlock(block, context) {
 }
 
 function parseQuestionBank(filePath) {
-  const text = fs.readFileSync(filePath, "utf8");
+  const text = fs.readFileSync(filePath, "utf8").replace(/\r\n?/g, "\n");
   const moduleMatch = text.match(/^#\s+Module\s+(\d+):\s+(.+)$/m);
   const unitMatch = text.match(/^##\s+Unit\s+(\d+)\s+Question Bank:\s+(.+)$/m);
 

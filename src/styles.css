@@ -96,6 +96,13 @@ h1 {
   justify-content: flex-end;
 }
 
+.resume-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: flex-end;
+}
+
 .primary {
   background: #196b54;
   color: #ffffff;

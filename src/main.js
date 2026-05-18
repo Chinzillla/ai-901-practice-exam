@@ -25,11 +25,14 @@ const DEFAULT_LIMITS = {
 
 const HISTORY_KEY = "ai901.examHistory.v1";
 const PROGRESS_KEY = "ai901.unitProgress.v1";
+const DRAFT_KEY = "ai901.activeExam.v1";
+const STORAGE_TEST_KEY = "ai901.storageTest";
 const HISTORY_LIMIT = 200;
 
 const app = document.querySelector("#app");
 
 let dataset = null;
+let questionById = new Map();
 let mode = "setup";
 let currentScope = { type: "weighted", id: "weighted", title: "Official weighted mock exam" };
 let exam = [];
@@ -37,15 +40,29 @@ let selectedAnswers = {};
 let submitted = false;
 let examHistory = [];
 let unitProgress = {};
+let savedDraft = null;
 let activeAttemptId = null;
 
 function practiceQuestions() {
   return dataset.questions.filter((question) => question.isCountedUnit);
 }
 
-function readStorage(key, fallback) {
+function getBrowserStorage() {
   try {
-    const value = window.localStorage.getItem(key);
+    window.localStorage.setItem(STORAGE_TEST_KEY, "1");
+    window.localStorage.removeItem(STORAGE_TEST_KEY);
+    return window.localStorage;
+  } catch {
+    return null;
+  }
+}
+
+function readStorage(key, fallback) {
+  const storage = getBrowserStorage();
+  if (!storage) return fallback;
+
+  try {
+    const value = storage.getItem(key);
     return value ? JSON.parse(value) : fallback;
   } catch {
     return fallback;
@@ -53,7 +70,21 @@ function readStorage(key, fallback) {
 }
 
 function writeStorage(key, value) {
-  window.localStorage.setItem(key, JSON.stringify(value));
+  const storage = getBrowserStorage();
+  if (!storage) return false;
+
+  try {
+    storage.setItem(key, JSON.stringify(value));
+    return true;
+  } catch {
+    return false;
+  }
+}
+
+function removeStorage(key) {
+  const storage = getBrowserStorage();
+  if (!storage) return;
+  storage.removeItem(key);
 }
 
 function formatDate(value) {
@@ -201,6 +232,11 @@ function getAnsweredCount() {
   return exam.filter((question) => isQuestionAnswered(question)).length;
 }
 
+function getSelectedAnswerCount(answers) {
+  return Object.values(answers ?? {}).filter((answer) => (Array.isArray(answer) ? answer.length > 0 : Boolean(answer)))
+    .length;
+}
+
 function answerList(question) {
   return question.answers ?? [question.answer];
 }
@@ -223,6 +259,127 @@ function isQuestionCorrect(question) {
   return sameAnswerSet(selectedList(question), answerList(question));
 }
 
+function storageQuestionSnapshot(question) {
+  return {
+    id: question.id,
+    examNumber: question.examNumber,
+    optionOrder: question.options.map((option) => option.label),
+    selectedAnswer: selectedAnswers[question.id],
+    isCorrect: isQuestionCorrect(question),
+  };
+}
+
+function hydrateStoredQuestion(storedQuestion) {
+  if (storedQuestion.question && Array.isArray(storedQuestion.options)) {
+    return {
+      ...storedQuestion,
+      options: storedQuestion.options.map((option, index) => ({
+        ...option,
+        displayLabel: option.displayLabel ?? String.fromCharCode(65 + index),
+      })),
+    };
+  }
+
+  const source = questionById.get(storedQuestion.id);
+  if (!source) return null;
+
+  const requestedOrder = Array.isArray(storedQuestion.optionOrder)
+    ? storedQuestion.optionOrder
+    : source.options.map((option) => option.label);
+  const orderedLabels = [
+    ...requestedOrder,
+    ...source.options.map((option) => option.label).filter((label) => !requestedOrder.includes(label)),
+  ];
+  const options = orderedLabels
+    .map((label, index) => {
+      const option = source.options.find((item) => item.label === label);
+      return option
+        ? {
+            ...option,
+            displayLabel: String.fromCharCode(65 + index),
+          }
+        : null;
+    })
+    .filter(Boolean);
+
+  return {
+    ...source,
+    examNumber: storedQuestion.examNumber,
+    options,
+    selectedAnswer: storedQuestion.selectedAnswer,
+    isCorrect: storedQuestion.isCorrect,
+  };
+}
+
+function compactExamQuestions() {
+  return exam.map(storageQuestionSnapshot);
+}
+
+function compactStoredAttempt(attempt) {
+  if (!Array.isArray(attempt.questions)) return attempt;
+
+  return {
+    ...attempt,
+    questions: attempt.questions
+      .map((question) => ({
+        id: question.id,
+        examNumber: question.examNumber,
+        optionOrder: question.optionOrder ?? question.options?.map((option) => option.label) ?? [],
+        selectedAnswer: question.selectedAnswer,
+        isCorrect: question.isCorrect,
+      }))
+      .filter((question) => question.id),
+  };
+}
+
+function persistExamHistory() {
+  let nextHistory = examHistory.slice(0, HISTORY_LIMIT);
+  while (nextHistory.length > 0 && !writeStorage(HISTORY_KEY, nextHistory)) {
+    nextHistory = nextHistory.slice(0, Math.max(0, nextHistory.length - 10));
+  }
+  examHistory = nextHistory;
+}
+
+function loadSavedDraft() {
+  const draft = readStorage(DRAFT_KEY, null);
+  if (!draft || !draft.scope || !Array.isArray(draft.questions)) return null;
+
+  const draftExam = draft.questions.map(hydrateStoredQuestion).filter(Boolean);
+  if (draftExam.length !== draft.questions.length || draftExam.length === 0) {
+    removeStorage(DRAFT_KEY);
+    return null;
+  }
+
+  return {
+    scope: draft.scope,
+    exam: draftExam,
+    selectedAnswers: draft.selectedAnswers ?? {},
+    savedAt: draft.savedAt,
+  };
+}
+
+function saveDraft() {
+  if (mode !== "exam" || submitted || exam.length === 0) return;
+
+  const draft = {
+    savedAt: new Date().toISOString(),
+    scope: { ...currentScope },
+    questions: compactExamQuestions(),
+    selectedAnswers,
+  };
+  if (writeStorage(DRAFT_KEY, draft)) {
+    savedDraft = {
+      ...draft,
+      exam,
+    };
+  }
+}
+
+function clearDraft() {
+  removeStorage(DRAFT_KEY);
+  savedDraft = null;
+}
+
 function saveExamAttempt() {
   const score = getScore();
   const total = exam.length;
@@ -234,33 +391,11 @@ function saveExamAttempt() {
     score,
     total,
     percent: Math.round((score / total) * 100),
-    questions: exam.map((question) => ({
-      id: question.id,
-      examNumber: question.examNumber,
-      moduleNumber: question.moduleNumber,
-      moduleName: question.moduleName,
-      unitNumber: question.unitNumber,
-      unitName: question.unitName,
-      learningPathNumber: question.learningPathNumber,
-      learningPathName: question.learningPathName,
-      examDomainName: question.examDomainName,
-      examDomainOfficialRange: question.examDomainOfficialRange,
-      sourceFile: question.sourceFile,
-      question: question.question,
-      options: question.options,
-      answer: question.answer,
-      answers: answerList(question),
-      isMultiSelect: question.isMultiSelect,
-      correctAnswer: question.correctAnswer,
-      correctAnswers: question.correctAnswers ?? [question.correctAnswer],
-      rationale: question.rationale,
-      selectedAnswer: selectedAnswers[question.id],
-      isCorrect: isQuestionCorrect(question),
-    })),
+    questions: compactExamQuestions(),
   };
 
   examHistory = [attempt, ...examHistory].slice(0, HISTORY_LIMIT);
-  writeStorage(HISTORY_KEY, examHistory);
+  persistExamHistory();
 
   if (currentScope.type === "unit" && score === total) {
     const key = unitProgressKey(currentScope.moduleNumber, currentScope.unitNumber);
@@ -281,6 +416,7 @@ function saveExamAttempt() {
 function submitExam() {
   submitted = true;
   activeAttemptId = saveExamAttempt();
+  clearDraft();
   render();
   window.scrollTo({ top: 0, behavior: "smooth" });
 }
@@ -288,6 +424,8 @@ function submitExam() {
 function openAttempt(attemptId) {
   const attempt = examHistory.find((item) => item.id === attemptId);
   if (!attempt) return;
+  const attemptQuestions = attempt.questions.map(hydrateStoredQuestion).filter(Boolean);
+  if (attemptQuestions.length === 0) return;
 
   activeAttemptId = attempt.id;
   currentScope = {
@@ -295,12 +433,30 @@ function openAttempt(attemptId) {
     title: `Review: ${attempt.scope.title}`,
     reviewTitle: attempt.scope.title,
   };
-  exam = attempt.questions.map((question) => ({ ...question }));
-  selectedAnswers = Object.fromEntries(attempt.questions.map((question) => [question.id, question.selectedAnswer]));
+  exam = attemptQuestions.map((question) => ({ ...question }));
+  selectedAnswers = Object.fromEntries(attemptQuestions.map((question) => [question.id, question.selectedAnswer]));
   submitted = true;
   mode = "review";
   render();
   window.scrollTo({ top: 0, behavior: "smooth" });
+}
+
+function resumeSavedDraft() {
+  if (!savedDraft) return;
+  currentScope = savedDraft.scope;
+  exam = savedDraft.exam.map((question) => ({ ...question }));
+  selectedAnswers = { ...savedDraft.selectedAnswers };
+  submitted = false;
+  activeAttemptId = null;
+  mode = "exam";
+  saveDraft();
+  render();
+  window.scrollTo({ top: 0, behavior: "smooth" });
+}
+
+function discardSavedDraft() {
+  clearDraft();
+  render();
 }
 
 function moduleDistribution() {
@@ -341,6 +497,7 @@ function renderTopbar(title, subtitle, actions = "") {
 }
 
 function renderSetup() {
+  savedDraft = loadSavedDraft();
   const units = getUnits();
   const completedUnits = units
     .map((unit) => ({ ...unit, completion: getUnitCompletion(unit.moduleNumber, unit.unitNumber) }))
@@ -413,6 +570,21 @@ function renderSetup() {
         .join("")
     : `<li class="history-item"><div><strong>No exam attempts yet</strong><span>Submitted exams will appear here.</span></div></li>`;
 
+  const draftPanel = savedDraft
+    ? `
+      <section class="hero-panel saved-draft">
+        <div>
+          <h2>Saved Exam</h2>
+          <p>${savedDraft.scope.title} | ${getSelectedAnswerCount(savedDraft.selectedAnswers)}/${savedDraft.exam.length} answered | Saved ${formatDate(savedDraft.savedAt)}</p>
+        </div>
+        <div class="resume-actions">
+          <button class="primary" id="resume-draft" type="button">Resume</button>
+          <button class="secondary" id="discard-draft" type="button">Discard</button>
+        </div>
+      </section>
+    `
+    : "";
+
   return `
     ${renderTopbar(
       "Practice Exam Hub",
@@ -421,6 +593,8 @@ function renderSetup() {
     )}
 
     <main class="hub">
+      ${draftPanel}
+
       <section class="hero-panel">
         <div>
           <h2>Full Mock Exam</h2>
@@ -669,6 +843,9 @@ function scopeFromButton(button) {
 }
 
 function bindSetupEvents() {
+  document.querySelector("#resume-draft")?.addEventListener("click", resumeSavedDraft);
+  document.querySelector("#discard-draft")?.addEventListener("click", discardSavedDraft);
+
   document.querySelectorAll(".start-scope").forEach((button) => {
     button.addEventListener("click", () => startExam(scopeFromButton(button)));
   });
@@ -714,6 +891,7 @@ function bindExamEvents() {
   document.querySelectorAll("input[type='radio']").forEach((input) => {
     input.addEventListener("change", (event) => {
       selectedAnswers[event.target.name] = event.target.value;
+      saveDraft();
       render();
     });
   });
@@ -729,6 +907,7 @@ function bindExamEvents() {
         if (index >= 0) nextValues.splice(index, 1);
       }
       selectedAnswers[event.target.name] = nextValues;
+      saveDraft();
       render();
     });
   });
@@ -745,13 +924,16 @@ function render() {
 
 async function init() {
   app.innerHTML = `<div class="loading">Loading AI-901 question banks...</div>`;
-  const response = await fetch("/questions.json");
+  const response = await fetch(`${import.meta.env.BASE_URL}questions.json`);
   if (!response.ok) {
     throw new Error("Unable to load generated question dataset.");
   }
   dataset = await response.json();
-  examHistory = readStorage(HISTORY_KEY, []);
+  questionById = new Map(dataset.questions.map((question) => [question.id, question]));
+  examHistory = readStorage(HISTORY_KEY, []).map(compactStoredAttempt);
   unitProgress = readStorage(PROGRESS_KEY, {});
+  savedDraft = loadSavedDraft();
+  persistExamHistory();
   render();
 }
 
