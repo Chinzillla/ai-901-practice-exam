@@ -924,7 +924,8 @@ function render() {
 
 async function init() {
   app.innerHTML = `<div class="loading">Loading AI-901 question banks...</div>`;
-  const response = await fetch(`${import.meta.env.BASE_URL}questions.json`);
+  const questionsUrl = `${import.meta.env.BASE_URL}questions.json?v=${Date.now()}`;
+  const response = await fetch(questionsUrl, { cache: "no-store" });
   if (!response.ok) {
     throw new Error("Unable to load generated question dataset.");
   }

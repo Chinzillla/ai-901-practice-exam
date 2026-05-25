@@ -13,7 +13,7 @@
     {
       "route": "/questions.json",
       "headers": {
-        "Cache-Control": "public, max-age=3600"
+        "Cache-Control": "no-store, max-age=0"
       }
     }
   ],
