@@ -14,7 +14,7 @@ C. model selection
 D. The model catalog  
 
 **Answer:** D  
-**Rationale:** This scenario matches Explore the model catalog as described in the unit.
+**Rationale:** The requirement matches the unit capability named in the correct option.
 
 ---
 
@@ -56,10 +56,10 @@ D. All catalog models have identical capabilities.
 
 ### 5. What should a learner remember about "model card"?
 
-A. a process for changing the visual theme of the development portal  
-B. a manual-only activity that does not use an AI model  
-C. a security shortcut that removes the need for access controls  
-D. documentation that summarizes a model's purpose, limits, and usage details as described in this unit  
+A. a configuration task for the interface rather than the AI behavior  
+B. a rule-based process that does not use model reasoning  
+C. an access-control setting rather than the concept being defined  
+D. model documentation summarizing a model's purpose, limits, and usage details  
 
 **Answer:** D  
 **Rationale:** "model card" is tested by recognizing its purpose, not by memorizing wording from the page.
@@ -68,7 +68,7 @@ D. documentation that summarizes a model's purpose, limits, and usage details as
 
 ### 6. What is the purpose of exploring model details before deployment?
 
-A. To change the portal theme.  
+A. To change project navigation settings.  
 B. To bypass responsible AI requirements.  
 C. To verify that the model supports the required task and usage conditions.  
 D. To avoid testing prompts later.  
@@ -80,8 +80,8 @@ D. To avoid testing prompts later.
 
 ### 7. Which two details help compare models in a catalog? Choose two.
 
-A. Desktop wallpaper  
-B. Keyboard brand  
+A. Project display preference  
+B. Client device detail  
 C. Learner's exam history  
 D. Supported capabilities  
 E. Model limitations  
@@ -119,10 +119,10 @@ F. Cost or deployment constraints
 
 ### 10. Which description best matches "model capability"?
 
-A. Skip testing because AI outputs are always deterministic.  
-B. Use image analysis even when the input is only plain text.  
-C. the type of task a model is designed to perform for this scenario  
-D. Choose a model only because it has the largest name recognition.  
+A. Rely on one successful trial instead of broader evaluation.  
+B. Use a visual analysis capability when the input is only text.  
+C. type of task a model is designed to perform  
+D. Choose a model based on popularity instead of task fit.  
 
 **Answer:** C  
 **Rationale:** The correct answer paraphrases how the unit explains "model capability".

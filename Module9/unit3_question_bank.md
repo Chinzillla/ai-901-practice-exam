@@ -14,7 +14,7 @@ C. Object detection
 D. An endpoint and a compatible SDK or API  
 
 **Answer:** D  
-**Rationale:** This scenario matches Choose an endpoint and SDK as described in the unit.
+**Rationale:** The requirement matches the unit capability named in the correct option.
 
 ---
 
@@ -56,10 +56,10 @@ D. SDKs make model evaluation unnecessary.
 
 ### 5. What should a learner remember about "SDK"?
 
-A. a process for changing the visual theme of the development portal  
-B. a manual-only activity that does not use an AI model  
-C. a security shortcut that removes the need for access controls  
-D. a library that simplifies calls to AI services from code as described in this unit  
+A. a configuration task for the interface rather than the AI behavior  
+B. a rule-based process that does not use model reasoning  
+C. an access-control setting rather than the concept being defined  
+D. library that simplifies calls to AI services from code  
 
 **Answer:** D  
 **Rationale:** "SDK" is tested by recognizing its purpose, not by memorizing wording from the page.
@@ -82,8 +82,8 @@ D. Only a screenshot of the model card.
 
 A. Image filter kernel  
 B. Speech phoneme table  
-C. Keyboard color  
-D. Endpoint for this scenario  
+C. Portal navigation setting  
+D. Callable service address  
 E. Credential  
 
 **Answer:** D, E  
@@ -93,7 +93,7 @@ E. Credential
 
 ### 8. An app sends prompts to a specific deployed model URL. What is the URL called?
 
-A. Endpoint for this scenario for this scenario  
+A. Network address for a deployed service  
 B. SDK  
 C. Information extraction  
 D. Model evaluation  
@@ -119,10 +119,10 @@ F. Read the model response
 
 ### 10. Which description best matches "API"?
 
-A. Skip testing because AI outputs are always deterministic.  
-B. Use image analysis even when the input is only plain text.  
-C. a programming interface for sending requests and receiving responses as described in this unit  
-D. Choose a model only because it has the largest name recognition.  
+A. Rely on one successful trial instead of broader evaluation.  
+B. Use a visual analysis capability when the input is only text.  
+C. programming interface for sending requests and receiving responses  
+D. Choose a model based on popularity instead of task fit.  
 
 **Answer:** C  
 **Rationale:** The correct answer paraphrases how the unit explains "API".

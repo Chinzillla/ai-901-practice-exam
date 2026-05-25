@@ -14,7 +14,7 @@ C. grounded response
 D. Retrieval augmented generation (RAG)  
 
 **Answer:** D  
-**Rationale:** This scenario matches Ground your model with Retrieval Augmented Generation as described in the unit.
+**Rationale:** The requirement matches the unit capability named in the correct option.
 
 ---
 
@@ -33,7 +33,7 @@ D. trusted context provided to help the model answer accurately
 ### 3. A system searches a knowledge base before generating an answer. What component performs the search?
 
 A. Object detection  
-B. Retriever for this scenario  
+B. Retriever capability  
 C. retrieval augmented generation  
 D. Prompt engineering  
 
@@ -56,10 +56,10 @@ D. Both strategies are only for speech synthesis.
 
 ### 5. What should a learner remember about "grounding data"?
 
-A. a process for changing the visual theme of the development portal  
-B. a manual-only activity that does not use an AI model  
-C. a security shortcut that removes the need for access controls  
-D. trusted context provided to help the model answer accurately as described in this unit  
+A. a configuration task for the interface rather than the AI behavior  
+B. a rule-based process that does not use model reasoning  
+C. an access-control setting rather than the concept being defined  
+D. grounding context provided to help the model answer accurately  
 
 **Answer:** D  
 **Rationale:** "grounding data" is tested by recognizing its purpose, not by memorizing wording from the page.
@@ -93,7 +93,7 @@ E. A prompt that includes retrieved context
 
 ### 8. A model includes relevant policy excerpts in the prompt before answering. What are those excerpts?
 
-A. Grounding data for this scenario  
+A. Grounding data capability  
 B. Speech synthesis  
 C. Information extraction  
 D. Model evaluation  
@@ -119,10 +119,10 @@ F. Knowledge-base question answering
 
 ### 10. Which description best matches "retriever"?
 
-A. Skip testing because AI outputs are always deterministic.  
-B. Use image analysis even when the input is only plain text.  
-C. the component that finds relevant documents or passages for this scenario  
-D. Choose a model only because it has the largest name recognition.  
+A. Rely on one successful trial instead of broader evaluation.  
+B. Use a visual analysis capability when the input is only text.  
+C. component that finds relevant documents or passages  
+D. Choose a model based on popularity instead of task fit.  
 
 **Answer:** C  
 **Rationale:** The correct answer paraphrases how the unit explains "retriever".

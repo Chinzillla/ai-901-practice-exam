@@ -14,7 +14,7 @@ C. AI agent
 D. Generative AI chat  
 
 **Answer:** D  
-**Rationale:** This scenario matches Generative AI and agents as described in the unit.
+**Rationale:** The requirement matches the unit capability named in the correct option.
 
 ---
 
@@ -56,10 +56,10 @@ D. SLMs always require more data and cost more to run.
 
 ### 5. What should a learner remember about "prompt"?
 
-A. a process for changing the visual theme of the development portal  
-B. a manual-only activity that does not use an AI model  
-C. a security shortcut that removes the need for access controls  
-D. the natural language input that starts the model's response as described in this unit  
+A. a configuration task for the interface rather than the AI behavior  
+B. a rule-based process that does not use model reasoning  
+C. an access-control setting rather than the concept being defined  
+D. a user's instruction or question that starts model generation  
 
 **Answer:** D  
 **Rationale:** "prompt" is tested by recognizing its purpose, not by memorizing wording from the page.
@@ -107,7 +107,7 @@ D. Model evaluation
 
 A. Replacing all privacy review  
 B. Guaranteeing every answer is factual  
-C. Changing screen brightness automatically  
+C. Classifying existing content instead of generating new content  
 D. Creating conversational bots  
 E. Drafting new documents or content  
 F. Summarizing complex documents  
@@ -119,10 +119,10 @@ F. Summarizing complex documents
 
 ### 10. Which description best matches "language model"?
 
-A. Skip testing because AI outputs are always deterministic.  
-B. Use image analysis even when the input is only plain text.  
-C. the trained model that predicts meaningful language based on patterns learned from large data as described in this unit  
-D. Choose a model only because it has the largest name recognition.  
+A. Rely on one successful trial instead of broader evaluation.  
+B. Use a visual analysis capability when the input is only text.  
+C. a model that generates language from learned text patterns  
+D. Choose a model based on popularity instead of task fit.  
 
 **Answer:** C  
 **Rationale:** The correct answer paraphrases how the unit explains "language model".

@@ -14,7 +14,7 @@ C. user experience layer
 D. Applying mitigation controls  
 
 **Answer:** D  
-**Rationale:** This scenario matches Mitigate potential harms as described in the unit.
+**Rationale:** The requirement matches the unit capability named in the correct option.
 
 ---
 
@@ -32,10 +32,10 @@ D. choosing or adapting the model to better fit the intended use
 
 ### 3. A solution uses a smaller task-specific model instead of a broad model to reduce irrelevant outputs. Which layer is involved?
 
-A. Object detection  
-B. Model layer for this scenario  
-C. mitigation  
-D. Prompt engineering  
+A. Speech synthesis  
+B. Model-level mitigation  
+C. Prompt engineering  
+D. Object detection  
 
 **Answer:** B  
 **Rationale:** The correct option is the unit concept that best fits the stated requirement.
@@ -56,10 +56,10 @@ D. Both steps mean skipping retesting.
 
 ### 5. What should a learner remember about "model layer"?
 
-A. a process for changing the visual theme of the development portal  
-B. a manual-only activity that does not use an AI model  
-C. a security shortcut that removes the need for access controls  
-D. choosing or adapting the model to better fit the intended use as described in this unit  
+A. a configuration task for the interface rather than the AI behavior  
+B. a rule-based process that does not use model reasoning  
+C. an access-control setting rather than the concept being defined  
+D. selecting or adapting the model to better fit the intended use  
 
 **Answer:** D  
 **Rationale:** "model layer" is tested by recognizing its purpose, not by memorizing wording from the page.
@@ -93,8 +93,8 @@ E. Add grounding with trusted data
 
 ### 8. An app warns users that AI output should be reviewed before use. Which mitigation layer is involved?
 
-A. User experience layer for this scenario  
-B. Speech synthesis  
+A. User-facing safeguards  
+B. mitigation  
 C. Information extraction  
 D. Model evaluation  
 
@@ -105,12 +105,12 @@ D. Model evaluation
 
 ### 9. Which three layers can include harm mitigations? Choose three.
 
-A. Keyboard layer  
-B. Office furniture layer  
-C. Monitor brightness layer  
-D. Model layer for this scenario for this scenario  
-E. Safety system layer for this scenario  
-F. User experience layer for this scenario for this scenario  
+A. Deployment management layer  
+B. Project organization layer  
+C. Monitoring dashboard layer  
+D. Model selection or adaptation layer  
+E. Safety system layer capability  
+F. Interface and review safeguards  
 
 **Answer:** D, E, F  
 **Rationale:** The unit describes layered mitigations across the model, safety systems, prompts/grounding, and user experience.
@@ -119,10 +119,10 @@ F. User experience layer for this scenario for this scenario
 
 ### 10. Which description best matches "safety system layer"?
 
-A. Skip testing because AI outputs are always deterministic.  
-B. Use image analysis even when the input is only plain text.  
-C. platform controls such as filters and safeguards that reduce harmful outputs as described in this unit  
-D. Choose a model only because it has the largest name recognition.  
+A. Rely on one successful trial instead of broader evaluation.  
+B. Use a visual analysis capability when the input is only text.  
+C. safety controls such as filters and safeguards that reduce harmful outputs  
+D. Choose a model based on popularity instead of task fit.  
 
 **Answer:** C  
 **Rationale:** The correct answer paraphrases how the unit explains "safety system layer".

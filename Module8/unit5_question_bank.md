@@ -14,7 +14,7 @@ C. safety evaluation
 D. Model evaluation  
 
 **Answer:** D  
-**Rationale:** This scenario matches Evaluate model performance as described in the unit.
+**Rationale:** The requirement matches the unit capability named in the correct option.
 
 ---
 
@@ -33,7 +33,7 @@ D. examples used to assess model behavior and output quality
 ### 3. A model is checked for harmful responses before production use. Which evaluation area is involved?
 
 A. Speech synthesis  
-B. Safety evaluation for this scenario  
+B. Safety evaluation capability  
 C. Prompt engineering  
 D. Object detection  
 
@@ -56,10 +56,10 @@ D. A model catalog score replaces all testing.
 
 ### 5. What should a learner remember about "test data"?
 
-A. a process for changing the visual theme of the development portal  
-B. a manual-only activity that does not use an AI model  
-C. a security shortcut that removes the need for access controls  
-D. examples used to assess model behavior and output quality as described in this unit  
+A. a configuration task for the interface rather than the AI behavior  
+B. a rule-based process that does not use model reasoning  
+C. an access-control setting rather than the concept being defined  
+D. test examples for assessing model behavior and output quality  
 
 **Answer:** D  
 **Rationale:** "test data" is tested by recognizing its purpose, not by memorizing wording from the page.
@@ -96,7 +96,7 @@ E. Identify safety risks
 A. Output quality  
 B. evaluation  
 C. Information extraction  
-D. Choose a model only because it has the largest name recognition.  
+D. Choose a model based on popularity instead of task fit.  
 
 **Answer:** A  
 **Rationale:** The scenario points to the unit capability described by the correct option.
@@ -105,7 +105,7 @@ D. Choose a model only because it has the largest name recognition.
 
 ### 9. Which three inputs can support useful model evaluation? Choose three.
 
-A. Random UI colors  
+A. Unrelated interface settings  
 B. Unrelated network names  
 C. Ignored test results  
 D. Representative prompts  
@@ -119,10 +119,10 @@ F. Quality or safety criteria
 
 ### 10. Which description best matches "quality metric"?
 
-A. Use image analysis even when the input is only plain text.  
-B. Store sensitive data without reviewing privacy requirements.  
-C. a measurement that reflects how useful or correct model output is as described in this unit  
-D. Skip testing because AI outputs are always deterministic.  
+A. Use a visual analysis capability when the input is only text.  
+B. Handle sensitive data without the required access controls.  
+C. measurement that reflects how useful or correct model output is  
+D. Rely on one successful trial instead of broader evaluation.  
 
 **Answer:** C  
 **Rationale:** The correct answer paraphrases how the unit explains "quality metric".

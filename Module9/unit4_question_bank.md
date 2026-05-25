@@ -14,7 +14,7 @@ C. Prompt engineering
 D. Responses API request and output  
 
 **Answer:** D  
-**Rationale:** This scenario matches Generate responses with the Responses API as described in the unit.
+**Rationale:** The requirement matches the unit capability named in the correct option.
 
 ---
 
@@ -33,7 +33,7 @@ D. the prompt or content provided to the model request
 ### 3. The app passes the user's question to the model. What part of the request is this?
 
 A. Object detection  
-B. Input for this scenario  
+B. Input capability  
 C. Responses API  
 D. output  
 
@@ -56,10 +56,10 @@ D. It is used only for manual portal testing.
 
 ### 5. What should a learner remember about "input"?
 
-A. a process for changing the visual theme of the development portal  
-B. a manual-only activity that does not use an AI model  
-C. a security shortcut that removes the need for access controls  
-D. the prompt or content provided to the model request for this scenario  
+A. a configuration task for the interface rather than the AI behavior  
+B. a rule-based process that does not use model reasoning  
+C. an access-control setting rather than the concept being defined  
+D. prompt or content provided to the model request  
 
 **Answer:** D  
 **Rationale:** "input" is tested by recognizing its purpose, not by memorizing wording from the page.
@@ -93,7 +93,7 @@ E. Read generated output
 
 ### 8. The app reads the generated answer returned by the model. What is this?
 
-A. Output for this scenario  
+A. Output capability  
 B. Speech synthesis  
 C. Information extraction  
 D. Model evaluation  
@@ -119,10 +119,10 @@ F. Handle the returned output
 
 ### 10. Which description best matches "output"?
 
-A. Skip testing because AI outputs are always deterministic.  
-B. Use image analysis even when the input is only plain text.  
-C. the generated result returned by the model for this scenario  
-D. Choose a model only because it has the largest name recognition.  
+A. Rely on one successful trial instead of broader evaluation.  
+B. Use a visual analysis capability when the input is only text.  
+C. generated result returned by the model  
+D. Choose a model based on popularity instead of task fit.  
 
 **Answer:** C  
 **Rationale:** The correct answer paraphrases how the unit explains "output".

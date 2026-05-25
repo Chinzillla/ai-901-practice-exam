@@ -14,7 +14,7 @@ C. Prompt engineering
 D. Visual question answering with a multimodal model  
 
 **Answer:** D  
-**Rationale:** This scenario matches Vision transformers and multimodal models as described in the unit.
+**Rationale:** The requirement matches the unit capability named in the correct option.
 
 ---
 
@@ -56,10 +56,10 @@ D. Multimodal means the model is smaller than every SLM.
 
 ### 5. What should a learner remember about "image patch"?
 
-A. a process for changing the visual theme of the development portal  
-B. a manual-only activity that does not use an AI model  
-C. a security shortcut that removes the need for access controls  
-D. a small region of an image processed as part of a transformer input as described in this unit  
+A. a configuration task for the interface rather than the AI behavior  
+B. a rule-based process that does not use model reasoning  
+C. an access-control setting rather than the concept being defined  
+D. small region of an image processed as part of a transformer input  
 
 **Answer:** D  
 **Rationale:** "image patch" is tested by recognizing its purpose, not by memorizing wording from the page.
@@ -110,7 +110,7 @@ B. Speech prosody
 C. PII redaction only  
 D. Attention over image regions  
 E. Text-and-image prompts  
-F. Visual question answering for this scenario  
+F. Visual question answering capability  
 
 **Answer:** D, E, F  
 **Rationale:** The unit covers transformers and multimodal vision-language tasks.
@@ -119,10 +119,10 @@ F. Visual question answering for this scenario
 
 ### 10. Which description best matches "multimodal model"?
 
-A. Skip testing because AI outputs are always deterministic.  
-B. Use image analysis even when the input is only plain text.  
-C. a model that can work with more than one input type, such as text and images as described in this unit  
-D. Choose a model only because it has the largest name recognition.  
+A. Rely on one successful trial instead of broader evaluation.  
+B. Use a visual analysis capability when the input is only text.  
+C. model that can work with more than one input type, such as text and images  
+D. Choose a model based on popularity instead of task fit.  
 
 **Answer:** C  
 **Rationale:** The correct answer paraphrases how the unit explains "multimodal model".

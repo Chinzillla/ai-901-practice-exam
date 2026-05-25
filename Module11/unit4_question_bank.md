@@ -14,7 +14,7 @@ C. base model
 D. Fine-tuning  
 
 **Answer:** D  
-**Rationale:** This scenario matches Fine-tune a model for consistent behavior as described in the unit.
+**Rationale:** The requirement matches the unit capability named in the correct option.
 
 ---
 
@@ -33,7 +33,7 @@ D. sample inputs and desired outputs used to teach the model a pattern
 ### 3. A team prepares pairs of sample prompts and ideal answers for model adaptation. What are these?
 
 A. Speech synthesis  
-B. Training examples for this scenario  
+B. Examples used to adapt behavior  
 C. Prompt engineering  
 D. Object detection  
 
@@ -56,10 +56,10 @@ D. When a simple output-format instruction is enough.
 
 ### 5. What should a learner remember about "training examples"?
 
-A. a process for changing the visual theme of the development portal  
-B. a manual-only activity that does not use an AI model  
-C. a security shortcut that removes the need for access controls  
-D. sample inputs and desired outputs used to teach the model a pattern as described in this unit  
+A. a configuration task for the interface rather than the AI behavior  
+B. a rule-based process that does not use model reasoning  
+C. an access-control setting rather than the concept being defined  
+D. training examples used to teach the model a pattern  
 
 **Answer:** D  
 **Rationale:** "training examples" is tested by recognizing its purpose, not by memorizing wording from the page.
@@ -96,7 +96,7 @@ E. Specialized task behavior from examples
 A. The base model's behavior  
 B. Information extraction  
 C. Model evaluation  
-D. Choose a model only because it has the largest name recognition.  
+D. Choose a model based on popularity instead of task fit.  
 
 **Answer:** A  
 **Rationale:** The scenario points to the unit capability described by the correct option.
@@ -108,8 +108,8 @@ D. Choose a model only because it has the largest name recognition.
 A. Ignoring data quality  
 B. Skipping validation  
 C. Using only image brightness settings  
-D. Base model for this scenario  
-E. Training examples for this scenario for this scenario  
+D. Base model capability  
+E. Sample inputs and outputs used for training  
 F. Evaluation after tuning  
 
 **Answer:** D, E, F  
@@ -119,10 +119,10 @@ F. Evaluation after tuning
 
 ### 10. Which description best matches "consistent behavior"?
 
-A. Use image analysis even when the input is only plain text.  
-B. Store sensitive data without reviewing privacy requirements.  
-C. reliable response style or decisions across similar requests as described in this unit  
-D. Skip testing because AI outputs are always deterministic.  
+A. Use a visual analysis capability when the input is only text.  
+B. Handle sensitive data without the required access controls.  
+C. consistent response behavior across similar requests  
+D. Rely on one successful trial instead of broader evaluation.  
 
 **Answer:** C  
 **Rationale:** The correct answer paraphrases how the unit explains "consistent behavior".

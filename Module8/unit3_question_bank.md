@@ -14,7 +14,7 @@ C. throughput
 D. Benchmarks  
 
 **Answer:** D  
-**Rationale:** This scenario matches Select models using benchmarks as described in the unit.
+**Rationale:** The requirement matches the unit capability named in the correct option.
 
 ---
 
@@ -33,7 +33,7 @@ D. a score that reflects how well a model performs for a measured task
 ### 3. A chatbot must respond quickly during live conversations. Which benchmark dimension matters most?
 
 A. Object detection  
-B. Latency for this scenario  
+B. Response time from request to result  
 C. benchmark  
 D. Prompt engineering  
 
@@ -56,10 +56,10 @@ D. A higher score always means lower cost.
 
 ### 5. What should a learner remember about "accuracy metric"?
 
-A. a process for changing the visual theme of the development portal  
-B. a manual-only activity that does not use an AI model  
-C. a security shortcut that removes the need for access controls  
-D. a score that reflects how well a model performs for a measured task as described in this unit  
+A. a configuration task for the interface rather than the AI behavior  
+B. a rule-based process that does not use model reasoning  
+C. an access-control setting rather than the concept being defined  
+D. score that reflects how well a model performs for a measured task  
 
 **Answer:** D  
 **Rationale:** "accuracy metric" is tested by recognizing its purpose, not by memorizing wording from the page.
@@ -80,9 +80,9 @@ D. Use them to avoid all evaluation.
 
 ### 7. Which two are useful benchmark considerations? Choose two.
 
-A. Portal color  
+A. Portal navigation setting  
 B. File name length  
-C. Keyboard layout  
+C. Client input setting  
 D. Task-specific quality  
 E. Response time  
 
@@ -93,7 +93,7 @@ E. Response time
 
 ### 8. A batch system must process many requests per minute. Which measure is most relevant?
 
-A. Throughput for this scenario  
+A. Throughput capability  
 B. Speech synthesis  
 C. Information extraction  
 D. Model evaluation  
@@ -109,7 +109,7 @@ A. Model name length
 B. Ignoring test data  
 C. Random selection  
 D. Accuracy  
-E. Latency for this scenario for this scenario  
+E. Time taken to return a response  
 F. Cost  
 
 **Answer:** D, E, F  
@@ -119,10 +119,10 @@ F. Cost
 
 ### 10. Which description best matches "latency"?
 
-A. Skip testing because AI outputs are always deterministic.  
-B. Use image analysis even when the input is only plain text.  
-C. the time a model takes to return a response for this scenario  
-D. Choose a model only because it has the largest name recognition.  
+A. Rely on one successful trial instead of broader evaluation.  
+B. Use a visual analysis capability when the input is only text.  
+C. time a model takes to return a response  
+D. Choose a model based on popularity instead of task fit.  
 
 **Answer:** C  
 **Rationale:** The correct answer paraphrases how the unit explains "latency".

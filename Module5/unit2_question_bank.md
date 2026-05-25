@@ -14,7 +14,7 @@ C. optical character recognition
 D. Image classification  
 
 **Answer:** D  
-**Rationale:** This scenario matches Computer vision tasks and techniques as described in the unit.
+**Rationale:** The requirement matches the unit capability named in the correct option.
 
 ---
 
@@ -33,7 +33,7 @@ D. identifying objects and their locations in an image
 ### 3. A security system must draw boxes around people and vehicles in camera images. Which task fits?
 
 A. Information extraction  
-B. Object detection for this scenario  
+B. Visual object localization  
 C. Prompt engineering  
 D. Speech synthesis  
 
@@ -56,10 +56,10 @@ D. Both techniques only classify a whole image.
 
 ### 5. What should a learner remember about "object detection"?
 
-A. a process for changing the visual theme of the development portal  
-B. a manual-only activity that does not use an AI model  
-C. a security shortcut that removes the need for access controls  
-D. identifying objects and their locations in an image for this scenario  
+A. a configuration task for the interface rather than the AI behavior  
+B. a rule-based process that does not use model reasoning  
+C. an access-control setting rather than the concept being defined  
+D. finding objects and their locations in an image  
 
 **Answer:** D  
 **Rationale:** "object detection" is tested by recognizing its purpose, not by memorizing wording from the page.
@@ -68,7 +68,7 @@ D. identifying objects and their locations in an image for this scenario
 
 ### 6. Why does a vision task need the right technique selected up front?
 
-A. Choosing a technique only changes the portal theme.  
+A. Choosing a technique only changes model packaging.  
 B. Vision tasks never depend on the input image.  
 C. Different business goals require different outputs, such as labels, locations, text, or pixel regions.  
 D. All vision techniques return the same output.  
@@ -82,9 +82,9 @@ D. All vision techniques return the same output.
 
 A. Prompt-based image generation  
 B. Text sentiment analysis  
-C. Choose a model only because it has the largest name recognition.  
-D. Image classification for this scenario  
-E. Object detection for this scenario for this scenario  
+C. Choose a model based on popularity instead of task fit.  
+D. Assigning an overall image label  
+E. Detecting and locating objects  
 
 **Answer:** D, E  
 **Rationale:** Classification and detection analyze existing images.
@@ -93,10 +93,10 @@ E. Object detection for this scenario for this scenario
 
 ### 8. A road analysis system must label each pixel as lane, vehicle, sidewalk, or sky. Which technique fits best?
 
-A. Semantic segmentation for this scenario  
+A. Semantic segmentation capability  
 B. Model evaluation  
-C. Skip testing because AI outputs are always deterministic.  
-D. Use image analysis even when the input is only plain text.  
+C. Rely on one successful trial instead of broader evaluation.  
+D. Use a visual analysis capability when the input is only text.  
 
 **Answer:** A  
 **Rationale:** The scenario points to the unit capability described by the correct option.
@@ -119,10 +119,10 @@ F. Extracted text
 
 ### 10. Which description best matches "semantic segmentation"?
 
-A. Avoid user instructions because models do not use prompts.  
-B. Use a manual-only process with no AI capability involved.  
-C. classifying pixels into categories or regions for this scenario  
-D. Store sensitive data without reviewing privacy requirements.  
+A. Leave the model without clear task instructions.  
+B. Use a rule-based workflow when model reasoning is required.  
+C. assigning categories to pixels into categories or regions  
+D. Handle sensitive data without the required access controls.  
 
 **Answer:** C  
 **Rationale:** The correct answer paraphrases how the unit explains "semantic segmentation".

@@ -54,14 +54,14 @@ function parseManifest() {
 }
 
 const globalDistractors = [
-  "Choose a model only because it has the largest name recognition.",
-  "Skip testing because AI outputs are always deterministic.",
-  "Use image analysis even when the input is only plain text.",
-  "Store sensitive data without reviewing privacy requirements.",
-  "Avoid user instructions because models do not use prompts.",
-  "Use a manual-only process with no AI capability involved.",
+  "Choose a model based on popularity instead of task fit.",
+  "Rely on one successful trial instead of broader evaluation.",
+  "Use a visual analysis capability when the input is only text.",
+  "Handle sensitive data without the required access controls.",
+  "Leave the model without clear task instructions.",
+  "Use a rule-based workflow when model reasoning is required.",
   "Assume the model can complete the task without any relevant input.",
-  "Select the capability based on the interface color instead of the requirement.",
+  "Select a capability that matches the tool name but not the input type.",
   "Use a speech feature when the scenario requires document understanding.",
   "Use a vision feature when the scenario requires language analysis.",
   "Treat every AI workload as if it returns the same type of output.",
@@ -80,9 +80,190 @@ const globalDistractors = [
   "Choose a model without checking whether it supports the input type.",
 ];
 
+function polishChoice(text) {
+  return clean(text)
+    .replace(/ for this scenario(?: for this scenario)*/gi, "")
+    .replace(/ as described in this unit/gi, "")
+    .replace(/Changing screen brightness automatically/gi, "Classifying existing content instead of generating new content")
+    .replace(/Changing screen brightness only/gi, "Changing a display setting instead of using an AI tool")
+    .replace(/Changing monitor brightness/gi, "Changing a display setting instead of testing a model")
+    .replace(/Screen brightness settings/gi, "Display settings rather than extracted content")
+    .replace(/Screen brightness/gi, "Display settings")
+    .replace(/Keyboard layouts only/gi, "Form layout metadata only")
+    .replace(/Keyboard layer/gi, "Deployment management layer")
+    .replace(/Office furniture layer/gi, "Project organization layer")
+    .replace(/Monitor brightness layer/gi, "Monitoring dashboard layer")
+    .replace(/Keyboard color/gi, "Portal navigation setting")
+    .replace(/Keyboard shortcuts/gi, "Developer productivity shortcuts")
+    .replace(/Keyboard shortcut/gi, "Developer productivity shortcut")
+    .replace(/Keyboard replacement/gi, "Device input setting")
+    .replace(/Keyboard brand/gi, "Client device detail")
+    .replace(/Physical keyboard size/gi, "Client device setting")
+    .replace(/desktop wallpaper/gi, "portal home page")
+    .replace(/Local wallpaper path/gi, "local file path unrelated to the endpoint")
+    .replace(/Set a portal home page/gi, "Select a model documentation page")
+    .replace(/Select the capability based on the interface color instead of the requirement\./gi, "Select a capability that matches the tool name but not the input type.")
+    .replace(/Manual spreadsheet formatting/gi, "Spreadsheet formatting without model analysis")
+    .replace(/Monitor calibration/gi, "Display calibration")
+    .replace(/Monitor refresh rate/gi, "Display refresh setting")
+    .replace(/Monitor size/gi, "Client display size")
+    .replace(/Mouse speed/gi, "Client input setting")
+    .replace(/Poster background color/gi, "Visual design preference")
+    .replace(/Portal color/gi, "Portal navigation setting")
+    .replace(/Random UI colors/gi, "Unrelated interface settings")
+    .replace(/Only the button color/gi, "Only the tool name without a schema")
+    .replace(/Only the color of generated text/gi, "Only the visual style of output")
+    .replace(/What color is the portal header\?/gi, "Which portal page was opened first?")
+    .replace(/a process for changing the visual theme of the development portal/gi, "a configuration task for the interface rather than the AI behavior")
+    .replace(/a manual-only activity that does not use an AI model/gi, "a rule-based process that does not use model reasoning")
+    .replace(/a security shortcut that removes the need for access controls/gi, "an access-control setting rather than the concept being defined")
+    .replace(/Choose a model only because it has the largest name recognition\./gi, "Choose a model based on popularity instead of task fit.")
+    .replace(/Skip testing because AI outputs are always deterministic\./gi, "Rely on one successful trial instead of broader evaluation.")
+    .replace(/Use a manual-only process with no AI capability involved\./gi, "Use a rule-based workflow when model reasoning is required.");
+}
+
+function duplicateSafeAnswer(answer, usedOptions) {
+  const raw = polishChoice(answer);
+  if (!usedOptions?.has(raw.toLowerCase())) return raw;
+
+  const variants = {
+    "rag": ["Retrieval augmented generation", "Grounding answers with retrieved content"],
+    "fine-tuning": ["Model adaptation with training examples", "Training-based model adaptation"],
+    "prompt engineering": ["Instruction and example refinement", "Prompt refinement"],
+    "object detection": ["Visual object localization", "Detecting and locating objects"],
+    "image generation": ["Generating images from prompts", "Prompt-based image creation"],
+    "language detection": ["Detecting document language", "Identifying the language used in text"],
+    "speech synthesis": ["Text-to-speech generation", "Generating spoken audio from text"],
+    "speech translation": ["Spoken-language translation", "Translating spoken input"],
+    "field extraction": ["Extracting named fields", "Identifying specific field values"],
+    "field mapping": ["Mapping values to output fields", "Assigning extracted values to fields"],
+    "confidence score": ["Extraction certainty score", "System confidence indicator"],
+    "ocr": ["Optical character recognition", "Reading text from visual content"],
+    "tokens": ["Text units processed by the model", "Units of text used for model processing"],
+    "embeddings": ["Vector representations of meaning", "Numeric meaning representations"],
+    "semantic similarity": ["Meaning-based comparison", "Comparing text by meaning"],
+    "feature maps": ["Maps of detected visual features", "Visual feature response maps"],
+    "filters": ["Learned pattern detectors", "Small matrices for visual pattern detection"],
+    "structured data": ["Organized fields and records", "Data arranged as defined fields"],
+    "generative ai": ["Content generation from prompts", "AI-generated content"],
+    "model catalog": ["Available model selection list", "Place to find selectable models"],
+    "playground": ["Portal testing workspace", "Interactive model testing area"],
+    "content understanding": ["Multimodal content extraction", "Understanding content to extract data"],
+    "system prompt": ["Behavior-setting instruction", "Instruction that sets role and boundaries"],
+    "user prompt": ["User-submitted task request", "The user's task instruction"],
+    "prompt": ["Input instruction to the model", "Natural language request to the model"],
+    "language model": ["Model trained to generate language", "Model that predicts language sequences"],
+    "fairness": ["Avoiding unfair treatment across groups", "Checking for uneven outcomes across groups"],
+    "image classification": ["Assigning an overall image label", "Labeling the main content of an image"],
+    "pixels": ["Individual image data points", "Small units that make up an image"],
+    "resolution": ["Image detail measured by pixel dimensions", "Pixel dimensions of an image"],
+    "latency": ["Response time from request to result", "Time taken to return a response"],
+    "endpoint": ["Callable service address", "Network address for a deployed service"],
+    "training examples": ["Examples used to adapt behavior", "Sample inputs and outputs used for training"],
+    "model layer": ["Model-level mitigation", "Model selection or adaptation layer"],
+    "user experience layer": ["User-facing safeguards", "Interface and review safeguards"],
+  };
+
+  const fallbackParaphrases = [];
+  const transformations = [
+    [/^the natural language input that starts the model's response$/i, "a user's instruction or question that starts model generation"],
+    [/^the trained model that predicts meaningful language based on patterns learned from large data$/i, "a model that generates language from learned text patterns"],
+    [/^a generative AI application that can reason, use instructions, and call tools to act$/i, "an AI app that follows instructions, reasons, and uses tools"],
+    [/^ai that creates (.+)$/i, "AI systems that create $1"],
+    [/^ai techniques that help software (.+)$/i, "language AI methods that help software $1"],
+    [/^the network address an app uses to call (.+)$/i, "a callable network address for $1"],
+    [/^the task request or question submitted by the user$/i, "a request or question sent by the user"],
+    [/^the system guidance that defines (.+)$/i, "instructions that define $1"],
+    [/^a capability the agent can call to (.+)$/i, "an agent-callable capability that can $1"],
+    [/^a place to discover and select (.+)$/i, "a catalog for discovering and choosing $1"],
+    [/^a workspace for organizing (.+)$/i, "a workspace that organizes $1"],
+    [/^a small matrix used to (.+)$/i, "a small matrix that helps $1"],
+    [/^a numeric representation that captures (.+)$/i, "a vector-style representation of $1"],
+    [/^a neural network design that uses (.+)$/i, "a neural architecture that uses $1"],
+    [/^a chunk of text (.+)$/i, "a text unit $1"],
+    [/^a word, word part, punctuation mark, or other text unit (.+)$/i, "a token-sized text unit $1"],
+    [/^using (.+)$/i, "use of $1"],
+    [/^identifying (.+)$/i, "finding $1"],
+    [/^detecting (.+)$/i, "finding $1"],
+    [/^recognizing (.+)$/i, "reading or identifying $1"],
+    [/^converting (.+) into (.+)$/i, "turning $1 into $2"],
+    [/^classifying (.+)$/i, "assigning categories to $1"],
+    [/^assigning (.+)$/i, "labeling by $1"],
+    [/^finding (.+)$/i, "locating $1"],
+    [/^protecting (.+)$/i, "keeping $1 protected"],
+    [/^ensuring (.+)$/i, "making sure $1"],
+    [/^improving (.+)$/i, "making $1 better"],
+    [/^measuring (.+)$/i, "assessing $1"],
+    [/^training or configuring (.+)$/i, "adapting or configuring $1"],
+    [/^adapting (.+)$/i, "changing $1"],
+    [/^instructions that define (.+)$/i, "guidance that defines $1"],
+    [/^standardizing text (.+)$/i, "normalizing text $1"],
+    [/^representing text by (.+)$/i, "using word-based features for $1"],
+    [/^scoring terms higher (.+)$/i, "ranking terms higher $1"],
+    [/^numeric values that represent (.+)$/i, "numbers that encode $1"],
+    [/^numeric output that shows (.+)$/i, "feature responses showing $1"],
+    [/^visual direction such as (.+)$/i, "style guidance such as $1"],
+    [/^content such as (.+)$/i, "unstructured material such as $1"],
+    [/^organized values such as (.+)$/i, "structured values such as $1"],
+    [/^reading machine-printed (.+)$/i, "recognizing printed $1"],
+    [/^connecting extracted values to (.+)$/i, "mapping extracted values to $1"],
+    [/^training models from data (.+)$/i, "learning from data $1"],
+    [/^tools for analyzing (.+)$/i, "vision capabilities for analyzing $1"],
+    [/^tools for speech recognition, synthesis, and related speech scenarios$/i, "speech capabilities for recognition and synthesis"],
+    [/^authentication material used to (.+)$/i, "credentials used to $1"],
+    [/^making system behavior and limitations (.+)$/i, "making limitations and behavior $1"],
+    [/^checking that an AI system (.+)$/i, "evaluating whether an AI system $1"],
+    [/^documentation that summarizes (.+)$/i, "model documentation summarizing $1"],
+    [/^settings such as (.+)$/i, "configuration values such as $1"],
+    [/^examples used to assess (.+)$/i, "test examples for assessing $1"],
+    [/^revising prompts and settings (.+)$/i, "iteratively changing prompts and settings $1"],
+    [/^instructions that shape (.+)$/i, "conversation guidance that shapes $1"],
+    [/^uploading, processing, or producing files (.+)$/i, "working with files $1"],
+    [/^running generated code (.+)$/i, "executing generated code $1"],
+    [/^information that may have changed (.+)$/i, "current information that may not be in $1"],
+    [/^structured values the model provides (.+)$/i, "arguments supplied by the model $1"],
+    [/^sample inputs and outputs (.+)$/i, "few-shot examples $1"],
+    [/^specific task guidance (.+)$/i, "explicit task instructions $1"],
+    [/^trusted context provided (.+)$/i, "grounding context provided $1"],
+    [/^reliable response style or decisions (.+)$/i, "consistent response behavior $1"],
+    [/^sample inputs and desired outputs (.+)$/i, "training examples $1"],
+    [/^people affected by or responsible for (.+)$/i, "stakeholders affected by or responsible for $1"],
+    [/^how different groups may be (.+)$/i, "potential ways groups may be $1"],
+    [/^examples used to evaluate (.+)$/i, "test cases used to evaluate $1"],
+    [/^platform controls such as (.+)$/i, "safety controls such as $1"],
+    [/^choosing or adapting (.+)$/i, "selecting or adapting $1"],
+    [/^tracking solution behavior, quality, and risk signals (.+)$/i, "monitoring behavior, quality, and risk signals $1"],
+  ];
+  for (const [pattern, replacement] of transformations) {
+    if (pattern.test(raw)) fallbackParaphrases.push(raw.replace(pattern, replacement));
+  }
+  if (/^[A-Za-z][A-Za-z0-9 ._/-]{1,40}$/.test(raw)) {
+    fallbackParaphrases.push(
+      `${raw} capability`,
+      `${raw} technique`,
+      `${raw} metric`,
+      `${raw} component`,
+      `${raw} concept`,
+      `${raw} approach`,
+    );
+  }
+  if (/^(a|an|the) /i.test(raw)) {
+    fallbackParaphrases.push(raw.replace(/^(a|an|the) /i, ""));
+  }
+
+  const candidates = [...(variants[raw.toLowerCase()] ?? []), ...fallbackParaphrases];
+  for (const candidate of candidates) {
+    const polished = polishChoice(candidate);
+    if (!usedOptions.has(polished.toLowerCase())) return polished;
+  }
+
+  // Reusing a precise answer is better than marking it with a giveaway phrase.
+  return raw;
+}
+
 function optionSet(correct, distractors, index, optionCount = 4, avoidOptions = new Set()) {
   const seen = new Set();
-  const normalizedCorrect = correct.map(clean);
+  const normalizedCorrect = correct.map(polishChoice);
   const options = [];
   for (const text of normalizedCorrect) {
     const key = text.toLowerCase();
@@ -91,7 +272,7 @@ function optionSet(correct, distractors, index, optionCount = 4, avoidOptions = 
       options.push({ text, correct: true });
     }
   }
-  for (const text of [...distractors, ...globalDistractors].map(clean)) {
+  for (const text of [...distractors, ...globalDistractors].map(polishChoice)) {
     const key = text.toLowerCase();
     const overlapsCorrect = normalizedCorrect.some((answer) => {
       const a = answer.toLowerCase();
@@ -114,12 +295,7 @@ function optionSet(correct, distractors, index, optionCount = 4, avoidOptions = 
 
 function question(index, stem, correct, distractors, rationale, optionCount = 4, usedOptions = null) {
   const adjustedCorrect = (Array.isArray(correct) ? correct : [correct]).map((answer) => {
-    let text = clean(answer);
-    if (!usedOptions) return text;
-    while (usedOptions.has(text.toLowerCase())) {
-      text = text.length <= 55 ? `${text} for this scenario` : `${text} as described in this unit`;
-    }
-    return text;
+    return usedOptions ? duplicateSafeAnswer(answer, usedOptions) : polishChoice(answer);
   });
   const options = optionSet(adjustedCorrect, distractors, index, optionCount, usedOptions ?? new Set());
   if (usedOptions) {
@@ -162,9 +338,9 @@ function meaningDistractors(profile, exclude = []) {
   return [
     ...profile.concepts.map((concept) => concept.meaning),
     ...(profile.meaningDistractors ?? []),
-    "a process for changing the visual theme of the development portal",
-    "a manual-only activity that does not use an AI model",
-    "a security shortcut that removes the need for access controls",
+    "a configuration task for the interface rather than the AI behavior",
+    "a rule-based process that does not use model reasoning",
+    "an access-control setting rather than the concept being defined",
   ].filter((item) => item && !excluded.has(item.toLowerCase()));
 }
 
@@ -172,6 +348,22 @@ function generatedQuestions(profile) {
   const qs = [];
   const c = profile.concepts;
   const s = profile.scenarios;
+  const answerPool = [
+    ...profile.scenarios.map((scenario) => scenario.answer),
+    profile.contrast.answer,
+    profile.process.answer,
+    ...profile.chooseTwo.correct,
+    ...profile.chooseThree.correct,
+    ...profile.concepts.map((concept) => concept.meaning),
+  ].map(polishChoice);
+  const otherAnswers = (current) => {
+    const currentAnswers = new Set((Array.isArray(current) ? current : [current]).map((answer) => polishChoice(answer).toLowerCase()));
+    return answerPool.filter((answer) => !currentAnswers.has(answer.toLowerCase()));
+  };
+  const exclude = (current) => [
+    ...(Array.isArray(current) ? current : [current]),
+    ...otherAnswers(current),
+  ];
   const common = (exclude = []) => commonDistractors(profile, exclude);
   const usedOptions = new Set();
   const make = (index, stem, correct, distractors, rationale, optionCount = 4) =>
@@ -182,7 +374,7 @@ function generatedQuestions(profile) {
     s[0].stem,
     s[0].answer,
     termDistractors(profile, [s[0].answer]),
-    s[0].rationale ?? `This scenario matches ${profile.title} as described in the unit.`,
+    s[0].rationale ?? `The requirement matches the unit capability named in the correct option.`,
   ));
 
   qs.push(make(
@@ -205,7 +397,7 @@ function generatedQuestions(profile) {
     4,
     profile.contrast.stem,
     profile.contrast.answer,
-    [...profile.contrast.distractors, ...common([profile.contrast.answer])],
+    [...profile.contrast.distractors, ...common(exclude(profile.contrast.answer))],
     profile.contrast.rationale,
   ));
 
@@ -221,7 +413,7 @@ function generatedQuestions(profile) {
     6,
     profile.process.stem,
     profile.process.answer,
-    [...profile.process.distractors, ...common([profile.process.answer])],
+    [...profile.process.distractors, ...common(exclude(profile.process.answer))],
     profile.process.rationale,
   ));
 
@@ -229,7 +421,7 @@ function generatedQuestions(profile) {
     7,
     profile.chooseTwo.stem,
     profile.chooseTwo.correct,
-    [...profile.chooseTwo.distractors, ...common(profile.chooseTwo.correct)],
+    [...profile.chooseTwo.distractors, ...common(exclude(profile.chooseTwo.correct))],
     profile.chooseTwo.rationale,
     5,
   ));
@@ -246,7 +438,7 @@ function generatedQuestions(profile) {
     9,
     profile.chooseThree.stem,
     profile.chooseThree.correct,
-    [...profile.chooseThree.distractors, ...common(profile.chooseThree.correct)],
+    [...profile.chooseThree.distractors, ...common(exclude(profile.chooseThree.correct))],
     profile.chooseThree.rationale,
     6,
   ));
@@ -449,7 +641,7 @@ const profiles = {
     chooseThree: {
       stem: "Which three content types can information extraction apply to in this course? Choose three.",
       correct: ["Documents", "Images", "Audio or video"],
-      distractors: ["Network firewall rules only", "Keyboard layouts only", "Screen brightness settings"],
+      distractors: ["Network firewall rules only", "Form layout metadata only", "Display settings rather than extracted content"],
       rationale: "The unit frames extraction across documents and broader multimodal content.",
     },
   },
@@ -764,7 +956,7 @@ Object.assign(profiles, {
     process: {
       stem: "What should a team clarify when defining intended use?",
       answer: "What the solution is for, who will use it, and where it should not be used.",
-      distractors: ["Only the color of generated text.", "The user's keyboard layout.", "A rule that no stakeholder can review it."],
+      distractors: ["Only the response wording, without defining allowed use.", "A deployment setting that does not address user impact.", "A rule that no stakeholder can review it."],
       rationale: "Intended use sets boundaries for responsible design.",
     },
     chooseTwo: {
@@ -814,7 +1006,7 @@ Object.assign(profiles, {
     chooseThree: {
       stem: "Which three harm areas should teams consider? Choose three.",
       correct: ["Fairness", "Privacy", "Safety"],
-      distractors: ["Keyboard color", "Window position", "File extension style only"],
+      distractors: ["Portal navigation setting", "Window position", "File extension style only"],
       rationale: "Responsible AI harm mapping includes fairness, privacy, safety, and related risks.",
     },
   },
@@ -846,7 +1038,7 @@ Object.assign(profiles, {
     chooseTwo: {
       stem: "Which two items support harm measurement? Choose two.",
       correct: ["Baseline results", "Evaluation metrics"],
-      distractors: ["Unrelated wallpaper", "Hidden credentials in prompts", "Ignoring test failures"],
+      distractors: ["Unrelated interface preference", "Hidden credentials in prompts", "Ignoring test failures"],
       rationale: "A baseline and metrics allow teams to compare risk before and after changes.",
     },
     chooseThree: {
@@ -890,7 +1082,7 @@ Object.assign(profiles, {
     chooseThree: {
       stem: "Which three layers can include harm mitigations? Choose three.",
       correct: ["Model layer", "Safety system layer", "User experience layer"],
-      distractors: ["Keyboard layer", "Office furniture layer", "Monitor brightness layer"],
+      distractors: ["Deployment management layer", "Project organization layer", "Monitoring dashboard layer"],
       rationale: "The unit describes layered mitigations across the model, safety systems, prompts/grounding, and user experience.",
     },
   },
@@ -1302,13 +1494,13 @@ Object.assign(profiles, {
     process: {
       stem: "What is the purpose of exploring model details before deployment?",
       answer: "To verify that the model supports the required task and usage conditions.",
-      distractors: ["To avoid testing prompts later.", "To change the portal theme.", "To bypass responsible AI requirements."],
+      distractors: ["To avoid testing prompts later.", "To change project navigation settings.", "To bypass responsible AI requirements."],
       rationale: "Catalog exploration informs model selection.",
     },
     chooseTwo: {
       stem: "Which two details help compare models in a catalog? Choose two.",
       correct: ["Supported capabilities", "Model limitations"],
-      distractors: ["Desktop wallpaper", "Keyboard brand", "Learner's exam history"],
+      distractors: ["Project display preference", "Client device detail", "Learner's exam history"],
       rationale: "Capabilities and limitations guide model selection.",
     },
     chooseThree: {
@@ -1346,7 +1538,7 @@ Object.assign(profiles, {
     chooseTwo: {
       stem: "Which two are useful benchmark considerations? Choose two.",
       correct: ["Task-specific quality", "Response time"],
-      distractors: ["Portal color", "File name length", "Keyboard layout"],
+      distractors: ["Portal navigation setting", "File name length", "Client input setting"],
       rationale: "Quality and latency are practical model comparison dimensions.",
     },
     chooseThree: {
@@ -1466,7 +1658,7 @@ Object.assign(profiles, {
     chooseThree: {
       stem: "Which three items can a developer experiment with in a playground workflow? Choose three.",
       correct: ["User prompts", "System instructions", "Model settings"],
-      distractors: ["Physical keyboard size", "Unrelated calendar alarms", "Hidden billing passwords"],
+      distractors: ["Client device setting", "Unrelated calendar alarms", "Hidden billing passwords"],
       rationale: "Playground work involves prompts, instructions, and settings.",
     },
   },
@@ -1498,7 +1690,7 @@ Object.assign(profiles, {
     chooseTwo: {
       stem: "Which two items are needed for most SDK-based model calls? Choose two.",
       correct: ["Endpoint", "Credential"],
-      distractors: ["Image filter kernel", "Speech phoneme table", "Keyboard color"],
+      distractors: ["Image filter kernel", "Speech phoneme table", "Portal navigation setting"],
       rationale: "The app needs a target and authorized access.",
     },
     chooseThree: {
@@ -1574,7 +1766,7 @@ Object.assign(profiles, {
     chooseTwo: {
       stem: "Which two message roles are commonly used in chat completions? Choose two.",
       correct: ["System", "User"],
-      distractors: ["Pixel", "Invoice", "Keyboard"],
+      distractors: ["Pixel", "Invoice", "Endpoint"],
       rationale: "System and user are core roles in chat message arrays.",
     },
     chooseThree: {
@@ -1615,7 +1807,7 @@ Object.assign(profiles, {
     chooseTwo: {
       stem: "Which two are examples of AI workloads? Choose two.",
       correct: ["Computer vision", "Natural language processing"],
-      distractors: ["Manual spreadsheet formatting", "Keyboard replacement", "Monitor calibration"],
+      distractors: ["Spreadsheet formatting without model analysis", "Device input setting", "Display calibration"],
       rationale: "Vision and language are common AI workload categories.",
     },
     chooseThree: {
@@ -1641,7 +1833,7 @@ Object.assign(profiles, {
     contrast: {
       stem: "How does the model catalog differ from the playground?",
       answer: "The catalog helps select models; the playground helps test model interactions.",
-      distractors: ["The catalog sends email, while the playground stores firewall rules.", "The playground is only for billing.", "Both features are unrelated to model development."],
+      distractors: ["The catalog manages deployed endpoint traffic, while the playground stores firewall rules.", "The playground is only for billing.", "Both features are unrelated to model development."],
       rationale: "The unit introduces Foundry areas for model discovery and experimentation.",
     },
     process: {
@@ -1685,19 +1877,19 @@ Object.assign(profiles, {
     process: {
       stem: "Why might a generative AI app use a Foundry Tool?",
       answer: "A tool adds a specialized capability that the base model alone may not provide.",
-      distractors: ["Tools prevent the app from using models.", "Tools are only for changing portal colors.", "Tools remove the need for authentication."],
+      distractors: ["Tools prevent the app from using models.", "Tools are only for changing project navigation settings.", "Tools remove the need for authentication."],
       rationale: "Tools extend apps with services such as speech, vision, and extraction.",
     },
     chooseTwo: {
       stem: "Which two are Foundry Tool scenarios? Choose two.",
       correct: ["Build speech-enabled apps", "Extract information from forms"],
-      distractors: ["Set a desktop wallpaper", "Skip all model evaluation", "Manually resize browser windows"],
+      distractors: ["Select a model documentation page", "Skip all model evaluation", "Manually resize browser windows"],
       rationale: "Speech and extraction are covered Foundry Tool scenarios.",
     },
     chooseThree: {
       stem: "Which three capabilities are represented by Foundry Tools? Choose three.",
       correct: ["Speech", "Vision", "Information extraction"],
-      distractors: ["Office furniture tracking", "Keyboard backlight control", "Manual grading only"],
+      distractors: ["Project asset tracking", "Client device control", "Manual grading only"],
       rationale: "Foundry Tools provide specialized Azure AI capabilities.",
     },
   },
@@ -1729,7 +1921,7 @@ Object.assign(profiles, {
     chooseTwo: {
       stem: "Which two values are commonly needed by a client app that calls an AI service? Choose two.",
       correct: ["Endpoint", "Credential"],
-      distractors: ["Monitor brand", "Mouse sensitivity", "Poster background color"],
+      distractors: ["Client display size", "Client input setting", "Visual design preference"],
       rationale: "Apps need where to call and how to authenticate.",
     },
     chooseThree: {
@@ -1773,7 +1965,7 @@ Object.assign(profiles, {
     chooseThree: {
       stem: "Which three responsible AI ideas are relevant to Azure AI solutions? Choose three.",
       correct: ["Fairness", "Privacy and security", "Accountability"],
-      distractors: ["Screen resolution", "Keyboard shortcuts", "Image file name length"],
+      distractors: ["Display resolution", "Developer productivity shortcuts", "Image file name length"],
       rationale: "These are responsible AI principles learners should recognize.",
     },
   },
@@ -1802,7 +1994,7 @@ Object.assign(profiles, {
     process: {
       stem: "Why does a vision task need the right technique selected up front?",
       answer: "Different business goals require different outputs, such as labels, locations, text, or pixel regions.",
-      distractors: ["All vision techniques return the same output.", "Choosing a technique only changes the portal theme.", "Vision tasks never depend on the input image."],
+      distractors: ["All vision techniques return the same output.", "Choosing a technique only changes model packaging.", "Vision tasks never depend on the input image."],
       rationale: "AI-901 questions often ask learners to match a requirement to the correct vision task.",
     },
     chooseTwo: {

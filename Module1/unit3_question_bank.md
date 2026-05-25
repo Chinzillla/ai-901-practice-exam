@@ -14,7 +14,7 @@ C. PII redaction
 D. Sentiment analysis  
 
 **Answer:** D  
-**Rationale:** This scenario matches Text and natural language as described in the unit.
+**Rationale:** The requirement matches the unit capability named in the correct option.
 
 ---
 
@@ -33,7 +33,7 @@ D. identifying the language or languages used in a document
 ### 3. Before routing documents to language-specific workflows, an app must identify whether each file is written in English, Spanish, or French. What should it use?
 
 A. Speech synthesis  
-B. Language detection for this scenario  
+B. Detecting document language  
 C. Prompt engineering  
 D. Object detection  
 
@@ -56,10 +56,10 @@ D. Both techniques only count how many characters are in the text.
 
 ### 5. What should a learner remember about "language detection"?
 
-A. a process for changing the visual theme of the development portal  
-B. a manual-only activity that does not use an AI model  
-C. a security shortcut that removes the need for access controls  
-D. identifying the language or languages used in a document as described in this unit  
+A. a configuration task for the interface rather than the AI behavior  
+B. a rule-based process that does not use model reasoning  
+C. an access-control setting rather than the concept being defined  
+D. finding the language or languages used in a document  
 
 **Answer:** D  
 **Rationale:** "language detection" is tested by recognizing its purpose, not by memorizing wording from the page.
@@ -96,7 +96,7 @@ E. Key-term extraction
 A. PII detection and redaction  
 B. Information extraction  
 C. Model evaluation  
-D. Choose a model only because it has the largest name recognition.  
+D. Choose a model based on popularity instead of task fit.  
 
 **Answer:** A  
 **Rationale:** The scenario points to the unit capability described by the correct option.
@@ -119,10 +119,10 @@ F. Redacting private data before sharing
 
 ### 10. Which description best matches "sentiment analysis"?
 
-A. Use image analysis even when the input is only plain text.  
-B. Store sensitive data without reviewing privacy requirements.  
-C. classifying text as positive, negative, or neutral for this scenario  
-D. Skip testing because AI outputs are always deterministic.  
+A. Use a visual analysis capability when the input is only text.  
+B. Handle sensitive data without the required access controls.  
+C. assigning categories to text as positive, negative, or neutral  
+D. Rely on one successful trial instead of broader evaluation.  
 
 **Answer:** C  
 **Rationale:** The correct answer paraphrases how the unit explains "sentiment analysis".

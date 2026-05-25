@@ -14,7 +14,7 @@ C. label prediction
 D. A convolutional neural network  
 
 **Answer:** D  
-**Rationale:** This scenario matches Convolutional neural networks as described in the unit.
+**Rationale:** The requirement matches the unit capability named in the correct option.
 
 ---
 
@@ -56,10 +56,10 @@ D. Filters remove the need for training data.
 
 ### 5. What should a learner remember about "filter"?
 
-A. a process for changing the visual theme of the development portal  
-B. a manual-only activity that does not use an AI model  
-C. a security shortcut that removes the need for access controls  
-D. a small matrix used to detect visual patterns such as edges or textures as described in this unit  
+A. a configuration task for the interface rather than the AI behavior  
+B. a rule-based process that does not use model reasoning  
+C. an access-control setting rather than the concept being defined  
+D. a small matrix that helps detect visual patterns such as edges or textures  
 
 **Answer:** D  
 **Rationale:** "filter" is tested by recognizing its purpose, not by memorizing wording from the page.
@@ -108,8 +108,8 @@ D. Model evaluation
 A. Prompt grounding  
 B. Prosody generation  
 C. Language detection  
-D. Filters for this scenario  
-E. Feature maps for this scenario  
+D. Learned pattern detectors  
+E. Maps of detected visual features  
 F. Training with labeled images  
 
 **Answer:** D, E, F  
@@ -119,10 +119,10 @@ F. Training with labeled images
 
 ### 10. Which description best matches "feature map"?
 
-A. Skip testing because AI outputs are always deterministic.  
-B. Use image analysis even when the input is only plain text.  
-C. numeric output that shows where a learned visual feature appears as described in this unit  
-D. Choose a model only because it has the largest name recognition.  
+A. Rely on one successful trial instead of broader evaluation.  
+B. Use a visual analysis capability when the input is only text.  
+C. feature responses showing where a learned visual feature appears  
+D. Choose a model based on popularity instead of task fit.  
 
 **Answer:** C  
 **Rationale:** The correct answer paraphrases how the unit explains "feature map".

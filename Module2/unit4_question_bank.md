@@ -14,7 +14,7 @@ C. agent orchestration
 D. A knowledge tool  
 
 **Answer:** D  
-**Rationale:** This scenario matches AI agents as described in the unit.
+**Rationale:** The requirement matches the unit capability named in the correct option.
 
 ---
 
@@ -56,10 +56,10 @@ D. Agents are only used for image classification.
 
 ### 5. What should a learner remember about "tool"?
 
-A. a process for changing the visual theme of the development portal  
-B. a manual-only activity that does not use an AI model  
-C. a security shortcut that removes the need for access controls  
-D. a capability the agent can call to retrieve information or perform an action as described in this unit  
+A. a configuration task for the interface rather than the AI behavior  
+B. a rule-based process that does not use model reasoning  
+C. an access-control setting rather than the concept being defined  
+D. an agent-callable capability that can retrieve information or perform an action  
 
 **Answer:** D  
 **Rationale:** "tool" is tested by recognizing its purpose, not by memorizing wording from the page.
@@ -109,7 +109,7 @@ A. A required video camera
 B. A spreadsheet file for every prompt  
 C. A ban on contextual data  
 D. A language model  
-E. Instructions for this scenario  
+E. Instructions capability  
 F. Tools  
 
 **Answer:** D, E, F  
@@ -119,10 +119,10 @@ F. Tools
 
 ### 10. Which description best matches "instructions"?
 
-A. Skip testing because AI outputs are always deterministic.  
-B. Use image analysis even when the input is only plain text.  
-C. the system guidance that defines how the agent should behave as described in this unit  
-D. Choose a model only because it has the largest name recognition.  
+A. Rely on one successful trial instead of broader evaluation.  
+B. Use a visual analysis capability when the input is only text.  
+C. instructions that define how the agent should behave  
+D. Choose a model based on popularity instead of task fit.  
 
 **Answer:** C  
 **Rationale:** The correct answer paraphrases how the unit explains "instructions".
