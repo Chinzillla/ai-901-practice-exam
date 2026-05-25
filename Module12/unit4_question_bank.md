@@ -14,7 +14,7 @@ C. test dataset
 D. Measuring potential harms  
 
 **Answer:** D  
-**Rationale:** This scenario matches Measure potential harms as described in the unit.
+**Rationale:** The requirement matches the unit capability named in the correct option.
 
 ---
 
@@ -33,7 +33,7 @@ D. an initial measurement used for comparison after changes
 ### 3. Before adding safeguards, a team records the current unsafe-response rate. What is that first measurement?
 
 A. Object detection  
-B. Baseline for this scenario  
+B. Baseline capability  
 C. evaluation metric  
 D. Prompt engineering  
 
@@ -56,10 +56,10 @@ D. Measurement prevents the use of test data.
 
 ### 5. What should a learner remember about "baseline"?
 
-A. a process for changing the visual theme of the development portal  
-B. a manual-only activity that does not use an AI model  
-C. a security shortcut that removes the need for access controls  
-D. an initial measurement used for comparison after changes as described in this unit  
+A. a configuration task for the interface rather than the AI behavior  
+B. a rule-based process that does not use model reasoning  
+C. an access-control setting rather than the concept being defined  
+D. initial measurement used for comparison after changes  
 
 **Answer:** D  
 **Rationale:** "baseline" is tested by recognizing its purpose, not by memorizing wording from the page.
@@ -80,7 +80,7 @@ D. Metrics should change randomly during testing.
 
 ### 7. Which two items support harm measurement? Choose two.
 
-A. Unrelated wallpaper  
+A. Unrelated interface preference  
 B. Hidden credentials in prompts  
 C. Ignoring test failures  
 D. Baseline results  
@@ -93,7 +93,7 @@ E. Evaluation metrics
 
 ### 8. A set of example prompts is used to test for harmful content. What is it?
 
-A. Test dataset for this scenario  
+A. Test dataset capability  
 B. Speech synthesis  
 C. Information extraction  
 D. Model evaluation  
@@ -119,10 +119,10 @@ F. Compare results over time
 
 ### 10. Which description best matches "test dataset"?
 
-A. Skip testing because AI outputs are always deterministic.  
-B. Use image analysis even when the input is only plain text.  
-C. examples used to evaluate risky or unwanted model behavior as described in this unit  
-D. Choose a model only because it has the largest name recognition.  
+A. Rely on one successful trial instead of broader evaluation.  
+B. Use a visual analysis capability when the input is only text.  
+C. test cases used to evaluate risky or unwanted model behavior  
+D. Choose a model based on popularity instead of task fit.  
 
 **Answer:** C  
 **Rationale:** The correct answer paraphrases how the unit explains "test dataset".

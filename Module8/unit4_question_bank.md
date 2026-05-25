@@ -14,7 +14,7 @@ C. authentication
 D. Deploy the model to an endpoint  
 
 **Answer:** D  
-**Rationale:** This scenario matches Deploy models to endpoints as described in the unit.
+**Rationale:** The requirement matches the unit capability named in the correct option.
 
 ---
 
@@ -56,10 +56,10 @@ D. They are unrelated to application integration.
 
 ### 5. What should a learner remember about "endpoint"?
 
-A. a process for changing the visual theme of the development portal  
-B. a manual-only activity that does not use an AI model  
-C. a security shortcut that removes the need for access controls  
-D. the URL or service target an app calls to use a deployed model as described in this unit  
+A. a configuration task for the interface rather than the AI behavior  
+B. a rule-based process that does not use model reasoning  
+C. an access-control setting rather than the concept being defined  
+D. URL or service target an app calls to use a deployed model  
 
 **Answer:** D  
 **Rationale:** "endpoint" is tested by recognizing its purpose, not by memorizing wording from the page.
@@ -80,9 +80,9 @@ D. Configuration only changes font color.
 
 ### 7. Which two items does an app commonly need to call a deployed model? Choose two.
 
-A. Monitor size  
+A. Client display size  
 B. Image caption only  
-C. Local wallpaper path  
+C. local file path unrelated to the endpoint  
 D. Endpoint URL  
 E. Credential or access token  
 
@@ -119,10 +119,10 @@ F. Test calls against the deployment
 
 ### 10. Which description best matches "configuration"?
 
-A. Skip testing because AI outputs are always deterministic.  
-B. Use image analysis even when the input is only plain text.  
-C. settings such as model choice, capacity, or access details for a deployment as described in this unit  
-D. Choose a model only because it has the largest name recognition.  
+A. Rely on one successful trial instead of broader evaluation.  
+B. Use a visual analysis capability when the input is only text.  
+C. configuration values such as model choice, capacity, or access details for a deployment  
+D. Choose a model based on popularity instead of task fit.  
 
 **Answer:** C  
 **Rationale:** The correct answer paraphrases how the unit explains "configuration".

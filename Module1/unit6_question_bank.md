@@ -14,7 +14,7 @@ C. content understanding
 D. Information extraction from documents  
 
 **Answer:** D  
-**Rationale:** This scenario matches Information extraction as described in the unit.
+**Rationale:** The requirement matches the unit capability named in the correct option.
 
 ---
 
@@ -33,7 +33,7 @@ D. recognizing printed or handwritten text in images or scanned documents
 ### 3. A system must read text from photos of signs before analysis. Which capability is needed first?
 
 A. Object detection  
-B. OCR for this scenario  
+B. Optical character recognition  
 C. information extraction  
 D. Prompt engineering  
 
@@ -56,10 +56,10 @@ D. Both are only used for chat prompts.
 
 ### 5. What should a learner remember about "OCR"?
 
-A. a process for changing the visual theme of the development portal  
-B. a manual-only activity that does not use an AI model  
-C. a security shortcut that removes the need for access controls  
-D. recognizing printed or handwritten text in images or scanned documents as described in this unit  
+A. a configuration task for the interface rather than the AI behavior  
+B. a rule-based process that does not use model reasoning  
+C. an access-control setting rather than the concept being defined  
+D. reading or identifying printed or handwritten text in images or scanned documents  
 
 **Answer:** D  
 **Rationale:** "OCR" is tested by recognizing its purpose, not by memorizing wording from the page.
@@ -80,7 +80,7 @@ D. It makes all data private automatically.
 
 ### 7. Which two are examples of extracted fields? Choose two.
 
-A. Monitor refresh rate  
+A. Display refresh setting  
 B. Voice pitch only  
 C. Image background color preference  
 D. Invoice total  
@@ -93,10 +93,10 @@ E. Customer address
 
 ### 8. A business wants structured values from forms that have different layouts. Which capability should it choose?
 
-A. Field extraction for this scenario  
+A. Extracting named fields  
 B. Speech synthesis  
 C. Model evaluation  
-D. Choose a model only because it has the largest name recognition.  
+D. Choose a model based on popularity instead of task fit.  
 
 **Answer:** A  
 **Rationale:** The scenario points to the unit capability described by the correct option.
@@ -106,8 +106,8 @@ D. Choose a model only because it has the largest name recognition.
 ### 9. Which three content types can information extraction apply to in this course? Choose three.
 
 A. Network firewall rules only  
-B. Keyboard layouts only  
-C. Screen brightness settings  
+B. Form layout metadata only  
+C. Display settings rather than extracted content  
 D. Documents  
 E. Images  
 F. Audio or video  
@@ -119,10 +119,10 @@ F. Audio or video
 
 ### 10. Which description best matches "field extraction"?
 
-A. Use image analysis even when the input is only plain text.  
-B. Store sensitive data without reviewing privacy requirements.  
-C. finding specific values such as dates, totals, names, or invoice numbers as described in this unit  
-D. Skip testing because AI outputs are always deterministic.  
+A. Use a visual analysis capability when the input is only text.  
+B. Handle sensitive data without the required access controls.  
+C. locating specific values such as dates, totals, names, or invoice numbers  
+D. Rely on one successful trial instead of broader evaluation.  
 
 **Answer:** C  
 **Rationale:** The correct answer paraphrases how the unit explains "field extraction".

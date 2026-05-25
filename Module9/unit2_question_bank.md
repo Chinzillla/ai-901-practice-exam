@@ -14,7 +14,7 @@ C. parameters
 D. The model playground  
 
 **Answer:** D  
-**Rationale:** This scenario matches Explore with the model playground as described in the unit.
+**Rationale:** The requirement matches the unit capability named in the correct option.
 
 ---
 
@@ -33,7 +33,7 @@ D. instructions that shape assistant behavior across the conversation
 ### 3. The assistant should always answer as a concise travel advisor. Where should that behavior be set?
 
 A. Object detection  
-B. System message for this scenario  
+B. System message capability  
 C. model playground  
 D. Prompt engineering  
 
@@ -56,10 +56,10 @@ D. It prevents developers from evaluating responses.
 
 ### 5. What should a learner remember about "system message"?
 
-A. a process for changing the visual theme of the development portal  
-B. a manual-only activity that does not use an AI model  
-C. a security shortcut that removes the need for access controls  
-D. instructions that shape assistant behavior across the conversation as described in this unit  
+A. a configuration task for the interface rather than the AI behavior  
+B. a rule-based process that does not use model reasoning  
+C. an access-control setting rather than the concept being defined  
+D. conversation guidance that shapes assistant behavior across the conversation  
 
 **Answer:** D  
 **Rationale:** "system message" is tested by recognizing its purpose, not by memorizing wording from the page.
@@ -93,7 +93,7 @@ E. Inspect a model response
 
 ### 8. A response is too vague, so the developer revises the prompt and tries again. What practice is this?
 
-A. Prompt iteration for this scenario  
+A. Prompt iteration capability  
 B. Speech synthesis  
 C. Information extraction  
 D. Model evaluation  
@@ -105,7 +105,7 @@ D. Model evaluation
 
 ### 9. Which three items can a developer experiment with in a playground workflow? Choose three.
 
-A. Physical keyboard size  
+A. Client device setting  
 B. Unrelated calendar alarms  
 C. Hidden billing passwords  
 D. User prompts  
@@ -119,10 +119,10 @@ F. Model settings
 
 ### 10. Which description best matches "prompt iteration"?
 
-A. Skip testing because AI outputs are always deterministic.  
-B. Use image analysis even when the input is only plain text.  
-C. revising prompts and settings based on observed responses as described in this unit  
-D. Choose a model only because it has the largest name recognition.  
+A. Rely on one successful trial instead of broader evaluation.  
+B. Use a visual analysis capability when the input is only text.  
+C. iteratively changing prompts and settings based on observed responses  
+D. Choose a model based on popularity instead of task fit.  
 
 **Answer:** C  
 **Rationale:** The correct answer paraphrases how the unit explains "prompt iteration".

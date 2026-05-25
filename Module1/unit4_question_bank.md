@@ -14,7 +14,7 @@ C. voice-enabled assistant
 D. Speech recognition  
 
 **Answer:** D  
-**Rationale:** This scenario matches Speech as described in the unit.
+**Rationale:** The requirement matches the unit capability named in the correct option.
 
 ---
 
@@ -33,7 +33,7 @@ D. converting text into spoken audio
 ### 3. A navigation app reads directions aloud to a driver. Which capability is being used?
 
 A. Information extraction  
-B. Speech synthesis for this scenario  
+B. Text-to-speech generation  
 C. Prompt engineering  
 D. Object detection  
 
@@ -56,10 +56,10 @@ D. Both only detect whether text is positive or negative.
 
 ### 5. What should a learner remember about "speech synthesis"?
 
-A. a process for changing the visual theme of the development portal  
-B. a manual-only activity that does not use an AI model  
-C. a security shortcut that removes the need for access controls  
-D. converting text into spoken audio for this scenario  
+A. a configuration task for the interface rather than the AI behavior  
+B. a rule-based process that does not use model reasoning  
+C. an access-control setting rather than the concept being defined  
+D. turning text into spoken audio  
 
 **Answer:** D  
 **Rationale:** "speech synthesis" is tested by recognizing its purpose, not by memorizing wording from the page.
@@ -93,10 +93,10 @@ E. Having a system read text aloud
 
 ### 8. A traveler speaks English and the app outputs the same message in Japanese. What capability is involved?
 
-A. Speech translation for this scenario  
+A. Spoken-language translation  
 B. Model evaluation  
-C. Choose a model only because it has the largest name recognition.  
-D. Skip testing because AI outputs are always deterministic.  
+C. Choose a model based on popularity instead of task fit.  
+D. Rely on one successful trial instead of broader evaluation.  
 
 **Answer:** A  
 **Rationale:** The scenario points to the unit capability described by the correct option.
@@ -119,10 +119,10 @@ F. Latency for real-time conversations
 
 ### 10. Which description best matches "speech translation"?
 
-A. Store sensitive data without reviewing privacy requirements.  
-B. Avoid user instructions because models do not use prompts.  
-C. recognizing speech in one language and producing translated output as described in this unit  
-D. Use image analysis even when the input is only plain text.  
+A. Handle sensitive data without the required access controls.  
+B. Leave the model without clear task instructions.  
+C. reading or identifying speech in one language and producing translated output  
+D. Use a visual analysis capability when the input is only text.  
 
 **Answer:** C  
 **Rationale:** The correct answer paraphrases how the unit explains "speech translation".

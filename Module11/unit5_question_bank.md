@@ -14,7 +14,7 @@ C. combined strategy
 D. Prompt engineering  
 
 **Answer:** D  
-**Rationale:** This scenario matches Compare and combine optimization strategies as described in the unit.
+**Rationale:** The requirement matches the unit capability named in the correct option.
 
 ---
 
@@ -33,7 +33,7 @@ D. improving factual grounding by retrieving relevant source content
 ### 3. A model needs answers from frequently updated support documents. Which strategy fits best?
 
 A. Information extraction  
-B. RAG for this scenario  
+B. Retrieval augmented generation  
 C. Object detection  
 D. Speech synthesis  
 
@@ -56,10 +56,10 @@ D. Use prompting to update private documents automatically.
 
 ### 5. What should a learner remember about "RAG"?
 
-A. a process for changing the visual theme of the development portal  
-B. a manual-only activity that does not use an AI model  
-C. a security shortcut that removes the need for access controls  
-D. improving factual grounding by retrieving relevant source content as described in this unit  
+A. a configuration task for the interface rather than the AI behavior  
+B. a rule-based process that does not use model reasoning  
+C. an access-control setting rather than the concept being defined  
+D. making factual grounding by retrieving relevant source content better  
 
 **Answer:** D  
 **Rationale:** "RAG" is tested by recognizing its purpose, not by memorizing wording from the page.
@@ -93,10 +93,10 @@ E. The model needs clearer task instructions
 
 ### 8. A model needs stable domain-specific behavior across many repeated cases. Which strategy may be appropriate?
 
-A. Fine-tuning for this scenario  
+A. Model adaptation with training examples  
 B. Model evaluation  
-C. Choose a model only because it has the largest name recognition.  
-D. Skip testing because AI outputs are always deterministic.  
+C. Choose a model based on popularity instead of task fit.  
+D. Rely on one successful trial instead of broader evaluation.  
 
 **Answer:** A  
 **Rationale:** The scenario points to the unit capability described by the correct option.
@@ -108,9 +108,9 @@ D. Skip testing because AI outputs are always deterministic.
 A. OCR page rotation  
 B. Speech sampling  
 C. Object tracking only  
-D. Prompt engineering for this scenario  
-E. RAG for this scenario for this scenario  
-F. Fine-tuning for this scenario for this scenario  
+D. Instruction and example refinement  
+E. Grounding answers with retrieved content  
+F. Training-based model adaptation  
 
 **Answer:** D, E, F  
 **Rationale:** These are the main generative AI optimization approaches in the unit.
@@ -119,10 +119,10 @@ F. Fine-tuning for this scenario for this scenario
 
 ### 10. Which description best matches "fine-tuning"?
 
-A. Store sensitive data without reviewing privacy requirements.  
-B. Avoid user instructions because models do not use prompts.  
-C. adapting model behavior with additional training examples as described in this unit  
-D. Use image analysis even when the input is only plain text.  
+A. Handle sensitive data without the required access controls.  
+B. Leave the model without clear task instructions.  
+C. changing model behavior with additional training examples  
+D. Use a visual analysis capability when the input is only text.  
 
 **Answer:** C  
 **Rationale:** The correct answer paraphrases how the unit explains "fine-tuning".

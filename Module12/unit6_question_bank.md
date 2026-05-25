@@ -14,7 +14,7 @@ C. continuous improvement
 D. Monitoring  
 
 **Answer:** D  
-**Rationale:** This scenario matches Manage a responsible generative AI solution as described in the unit.
+**Rationale:** The requirement matches the unit capability named in the correct option.
 
 ---
 
@@ -33,7 +33,7 @@ D. tracking solution behavior, quality, and risk signals over time
 ### 3. A harmful output is reported and the team follows a defined escalation plan. What process is being used?
 
 A. Speech synthesis  
-B. Incident response for this scenario  
+B. Incident response capability  
 C. Prompt engineering  
 D. Object detection  
 
@@ -56,10 +56,10 @@ D. Responsible AI ends when the model endpoint is created.
 
 ### 5. What should a learner remember about "monitoring"?
 
-A. a process for changing the visual theme of the development portal  
-B. a manual-only activity that does not use an AI model  
-C. a security shortcut that removes the need for access controls  
-D. tracking solution behavior, quality, and risk signals over time as described in this unit  
+A. a configuration task for the interface rather than the AI behavior  
+B. a rule-based process that does not use model reasoning  
+C. an access-control setting rather than the concept being defined  
+D. monitoring behavior, quality, and risk signals over time  
 
 **Answer:** D  
 **Rationale:** "monitoring" is tested by recognizing its purpose, not by memorizing wording from the page.
@@ -93,10 +93,10 @@ E. Update safeguards when risks change
 
 ### 8. A team updates prompts and filters as new risk patterns appear. What operating practice is this?
 
-A. Continuous improvement for this scenario  
+A. Continuous improvement capability  
 B. Information extraction  
 C. Model evaluation  
-D. Choose a model only because it has the largest name recognition.  
+D. Choose a model based on popularity instead of task fit.  
 
 **Answer:** A  
 **Rationale:** The scenario points to the unit capability described by the correct option.
@@ -119,10 +119,10 @@ F. Improve controls over time
 
 ### 10. Which description best matches "incident response"?
 
-A. Use image analysis even when the input is only plain text.  
-B. Store sensitive data without reviewing privacy requirements.  
-C. the process for handling harmful or unexpected AI behavior as described in this unit  
-D. Skip testing because AI outputs are always deterministic.  
+A. Use a visual analysis capability when the input is only text.  
+B. Handle sensitive data without the required access controls.  
+C. process for handling harmful or unexpected AI behavior  
+D. Rely on one successful trial instead of broader evaluation.  
 
 **Answer:** C  
 **Rationale:** The correct answer paraphrases how the unit explains "incident response".

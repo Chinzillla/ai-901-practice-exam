@@ -14,7 +14,7 @@ C. image filter
 D. Pixels  
 
 **Answer:** D  
-**Rationale:** This scenario matches Images and image processing as described in the unit.
+**Rationale:** The requirement matches the unit capability named in the correct option.
 
 ---
 
@@ -32,10 +32,10 @@ D. the number of pixels used to represent an image
 
 ### 3. A model struggles because the images are too small to show important details. What image property is most relevant?
 
-A. Object detection  
-B. Resolution for this scenario  
-C. pixel  
-D. Prompt engineering  
+A. Speech synthesis  
+B. Image detail measured by pixel dimensions  
+C. Prompt engineering  
+D. Object detection  
 
 **Answer:** B  
 **Rationale:** The correct option is the unit concept that best fits the stated requirement.
@@ -56,10 +56,10 @@ D. Grayscale images always contain more channels than RGB images.
 
 ### 5. What should a learner remember about "resolution"?
 
-A. a process for changing the visual theme of the development portal  
-B. a manual-only activity that does not use an AI model  
-C. a security shortcut that removes the need for access controls  
-D. the number of pixels used to represent an image for this scenario  
+A. a configuration task for the interface rather than the AI behavior  
+B. a rule-based process that does not use model reasoning  
+C. an access-control setting rather than the concept being defined  
+D. number of pixels used to represent an image  
 
 **Answer:** D  
 **Rationale:** "resolution" is tested by recognizing its purpose, not by memorizing wording from the page.
@@ -84,7 +84,7 @@ A. Email priority
 B. Voice pitch  
 C. Calendar timezone only  
 D. Pixel values  
-E. Resolution for this scenario for this scenario  
+E. Pixel dimensions of an image  
 
 **Answer:** D, E  
 **Rationale:** Pixel values and resolution are core image characteristics.
@@ -94,7 +94,7 @@ E. Resolution for this scenario for this scenario
 ### 8. A preprocessing step highlights edges before visual analysis. What technique is being used?
 
 A. An image filter  
-B. Speech synthesis  
+B. pixel  
 C. Information extraction  
 D. Model evaluation  
 
@@ -108,7 +108,7 @@ D. Model evaluation
 A. Phonemes  
 B. Sentiment labels  
 C. Meeting invitations  
-D. Pixels for this scenario  
+D. Individual image data points  
 E. Color channels  
 F. Filters  
 
@@ -119,10 +119,10 @@ F. Filters
 
 ### 10. Which description best matches "color channel"?
 
-A. Skip testing because AI outputs are always deterministic.  
-B. Use image analysis even when the input is only plain text.  
-C. numeric values that represent color components such as red, green, and blue as described in this unit  
-D. Choose a model only because it has the largest name recognition.  
+A. Rely on one successful trial instead of broader evaluation.  
+B. Use a visual analysis capability when the input is only text.  
+C. numbers that encode color components such as red, green, and blue  
+D. Choose a model based on popularity instead of task fit.  
 
 **Answer:** C  
 **Rationale:** The correct answer paraphrases how the unit explains "color channel".

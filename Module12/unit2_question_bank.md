@@ -14,7 +14,7 @@ C. risk mitigation
 D. Intended use and scope  
 
 **Answer:** D  
-**Rationale:** This scenario matches Plan a responsible generative AI solution as described in the unit.
+**Rationale:** The requirement matches the unit capability named in the correct option.
 
 ---
 
@@ -33,7 +33,7 @@ D. the approved purpose and context for the AI solution
 ### 3. A product owner, legal reviewer, developer, and support lead all review potential AI impacts. What group are they part of?
 
 A. Object detection  
-B. Stakeholders for this scenario  
+B. Stakeholders capability  
 C. intended use  
 D. Prompt engineering  
 
@@ -56,10 +56,10 @@ D. Planning is unrelated to generative AI.
 
 ### 5. What should a learner remember about "intended use"?
 
-A. a process for changing the visual theme of the development portal  
-B. a manual-only activity that does not use an AI model  
-C. a security shortcut that removes the need for access controls  
-D. the approved purpose and context for the AI solution for this scenario  
+A. a configuration task for the interface rather than the AI behavior  
+B. a rule-based process that does not use model reasoning  
+C. an access-control setting rather than the concept being defined  
+D. approved purpose and context for the AI solution  
 
 **Answer:** D  
 **Rationale:** "intended use" is tested by recognizing its purpose, not by memorizing wording from the page.
@@ -68,10 +68,10 @@ D. the approved purpose and context for the AI solution for this scenario
 
 ### 6. What should a team clarify when defining intended use?
 
-A. The user's keyboard layout.  
+A. A deployment setting that does not address user impact.  
 B. A rule that no stakeholder can review it.  
 C. What the solution is for, who will use it, and where it should not be used.  
-D. Only the color of generated text.  
+D. Only the response wording, without defining allowed use.  
 
 **Answer:** C  
 **Rationale:** Intended use sets boundaries for responsible design.
@@ -93,7 +93,7 @@ E. Define acceptable use boundaries
 
 ### 8. A team decides to require human review for high-impact outputs before deployment. What kind of planning is this?
 
-A. Risk mitigation for this scenario  
+A. Risk mitigation capability  
 B. Speech synthesis  
 C. Information extraction  
 D. Model evaluation  
@@ -119,10 +119,10 @@ F. Mitigation controls
 
 ### 10. Which description best matches "stakeholders"?
 
-A. Skip testing because AI outputs are always deterministic.  
-B. Use image analysis even when the input is only plain text.  
-C. people affected by or responsible for the AI system for this scenario  
-D. Choose a model only because it has the largest name recognition.  
+A. Rely on one successful trial instead of broader evaluation.  
+B. Use a visual analysis capability when the input is only text.  
+C. stakeholders affected by or responsible for the AI system  
+D. Choose a model based on popularity instead of task fit.  
 
 **Answer:** C  
 **Rationale:** The correct answer paraphrases how the unit explains "stakeholders".

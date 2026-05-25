@@ -14,7 +14,7 @@ C. AI workload
 D. Machine learning prediction  
 
 **Answer:** D  
-**Rationale:** This scenario matches What is AI? as described in the unit.
+**Rationale:** The requirement matches the unit capability named in the correct option.
 
 ---
 
@@ -33,7 +33,7 @@ D. training models from data so they can make predictions or classifications
 ### 3. A user asks a model to draft a support email from bullet points. Which AI category fits?
 
 A. Object detection  
-B. Generative AI for this scenario  
+B. Content generation from prompts  
 C. machine learning  
 D. Prompt engineering  
 
@@ -56,10 +56,10 @@ D. They are unrelated to Azure AI solutions.
 
 ### 5. What should a learner remember about "machine learning"?
 
-A. a process for changing the visual theme of the development portal  
-B. a manual-only activity that does not use an AI model  
-C. a security shortcut that removes the need for access controls  
-D. training models from data so they can make predictions or classifications as described in this unit  
+A. a configuration task for the interface rather than the AI behavior  
+B. a rule-based process that does not use model reasoning  
+C. an access-control setting rather than the concept being defined  
+D. learning from data so they can make predictions or classifications  
 
 **Answer:** D  
 **Rationale:** "machine learning" is tested by recognizing its purpose, not by memorizing wording from the page.
@@ -80,9 +80,9 @@ D. Every workload uses the same implementation.
 
 ### 7. Which two are examples of AI workloads? Choose two.
 
-A. Manual spreadsheet formatting  
-B. Keyboard replacement  
-C. Monitor calibration  
+A. Spreadsheet formatting without model analysis  
+B. Device input setting  
+C. Display calibration  
 D. Computer vision  
 E. Natural language processing  
 
@@ -119,10 +119,10 @@ F. Generate content
 
 ### 10. Which description best matches "generative AI"?
 
-A. Skip testing because AI outputs are always deterministic.  
-B. Use image analysis even when the input is only plain text.  
-C. AI that creates new content in response to prompts for this scenario  
-D. Choose a model only because it has the largest name recognition.  
+A. Rely on one successful trial instead of broader evaluation.  
+B. Use a visual analysis capability when the input is only text.  
+C. AI systems that create new content in response to prompts  
+D. Choose a model based on popularity instead of task fit.  
 
 **Answer:** C  
 **Rationale:** The correct answer paraphrases how the unit explains "generative AI".

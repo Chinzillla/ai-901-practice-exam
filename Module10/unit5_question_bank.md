@@ -14,7 +14,7 @@ C. grounded answer
 D. file_search  
 
 **Answer:** D  
-**Rationale:** This scenario matches Use the file_search tool as described in the unit.
+**Rationale:** The requirement matches the unit capability named in the correct option.
 
 ---
 
@@ -56,10 +56,10 @@ D. Both tools create audio output.
 
 ### 5. What should a learner remember about "vector store"?
 
-A. a process for changing the visual theme of the development portal  
-B. a manual-only activity that does not use an AI model  
-C. a security shortcut that removes the need for access controls  
-D. an index that supports semantic retrieval over file content as described in this unit  
+A. a configuration task for the interface rather than the AI behavior  
+B. a rule-based process that does not use model reasoning  
+C. an access-control setting rather than the concept being defined  
+D. index that supports semantic retrieval over file content  
 
 **Answer:** D  
 **Rationale:** "vector store" is tested by recognizing its purpose, not by memorizing wording from the page.
@@ -96,7 +96,7 @@ E. Retrieve relevant passages from indexed files
 A. A grounded answer  
 B. Information extraction  
 C. Model evaluation  
-D. Choose a model only because it has the largest name recognition.  
+D. Choose a model based on popularity instead of task fit.  
 
 **Answer:** A  
 **Rationale:** The scenario points to the unit capability described by the correct option.
@@ -109,7 +109,7 @@ A. Live web headlines
 B. Audio phonemes  
 C. Image style prompts  
 D. Uploaded files  
-E. Vector store for this scenario  
+E. Vector store capability  
 F. Relevant passages  
 
 **Answer:** D, E, F  
@@ -119,10 +119,10 @@ F. Relevant passages
 
 ### 10. Which description best matches "retrieval"?
 
-A. Use image analysis even when the input is only plain text.  
-B. Store sensitive data without reviewing privacy requirements.  
-C. finding relevant passages or documents for a model request as described in this unit  
-D. Skip testing because AI outputs are always deterministic.  
+A. Use a visual analysis capability when the input is only text.  
+B. Handle sensitive data without the required access controls.  
+C. locating relevant passages or documents for a model request  
+D. Rely on one successful trial instead of broader evaluation.  
 
 **Answer:** C  
 **Rationale:** The correct answer paraphrases how the unit explains "retrieval".

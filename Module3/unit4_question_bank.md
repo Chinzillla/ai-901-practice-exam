@@ -14,7 +14,7 @@ C. Prompt engineering
 D. Semantic similarity with embeddings  
 
 **Answer:** D  
-**Rationale:** This scenario matches Semantic language models as described in the unit.
+**Rationale:** The requirement matches the unit capability named in the correct option.
 
 ---
 
@@ -56,10 +56,10 @@ D. They remove the need for prompts and data.
 
 ### 5. What should a learner remember about "embedding"?
 
-A. a process for changing the visual theme of the development portal  
-B. a manual-only activity that does not use an AI model  
-C. a security shortcut that removes the need for access controls  
-D. a numeric representation that captures semantic meaning for text or tokens as described in this unit  
+A. a configuration task for the interface rather than the AI behavior  
+B. a rule-based process that does not use model reasoning  
+C. an access-control setting rather than the concept being defined  
+D. a vector-style representation of semantic meaning for text or tokens  
 
 **Answer:** D  
 **Rationale:** "embedding" is tested by recognizing its purpose, not by memorizing wording from the page.
@@ -108,9 +108,9 @@ D. Model evaluation
 A. Image filters  
 B. Audio waveform capture  
 C. Invoice table totals only  
-D. Embeddings for this scenario  
+D. Vector representations of meaning  
 E. Context  
-F. Semantic similarity for this scenario  
+F. Meaning-based comparison  
 
 **Answer:** D, E, F  
 **Rationale:** These concepts are central to representing and comparing meaning.
@@ -119,10 +119,10 @@ F. Semantic similarity for this scenario
 
 ### 10. Which description best matches "semantic similarity"?
 
-A. Skip testing because AI outputs are always deterministic.  
-B. Use image analysis even when the input is only plain text.  
-C. measuring how close pieces of text are in meaning for this scenario  
-D. Choose a model only because it has the largest name recognition.  
+A. Rely on one successful trial instead of broader evaluation.  
+B. Use a visual analysis capability when the input is only text.  
+C. assessing how close pieces of text are in meaning  
+D. Choose a model based on popularity instead of task fit.  
 
 **Answer:** C  
 **Rationale:** The correct answer paraphrases how the unit explains "semantic similarity".

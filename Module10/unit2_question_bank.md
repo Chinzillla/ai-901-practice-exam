@@ -14,7 +14,7 @@ C. Prompt engineering
 D. A knowledge tool  
 
 **Answer:** D  
-**Rationale:** This scenario matches What are tools? as described in the unit.
+**Rationale:** The requirement matches the unit capability named in the correct option.
 
 ---
 
@@ -56,10 +56,10 @@ D. Tools remove all need for validation.
 
 ### 5. What should a learner remember about "tool call"?
 
-A. a process for changing the visual theme of the development portal  
-B. a manual-only activity that does not use an AI model  
-C. a security shortcut that removes the need for access controls  
-D. the model's request to use a configured tool during a response as described in this unit  
+A. a configuration task for the interface rather than the AI behavior  
+B. a rule-based process that does not use model reasoning  
+C. an access-control setting rather than the concept being defined  
+D. model's request to use a configured tool during a response  
 
 **Answer:** D  
 **Rationale:** "tool call" is tested by recognizing its purpose, not by memorizing wording from the page.
@@ -71,7 +71,7 @@ D. the model's request to use a configured tool during a response as described i
 A. A random endpoint with no schema.  
 B. A ban on all model instructions.  
 C. Clear tool purpose, input parameters, and expected output.  
-D. Only the button color.  
+D. Only the tool name without a schema.  
 
 **Answer:** C  
 **Rationale:** Tools need clear definitions so the model can use them correctly.
@@ -82,7 +82,7 @@ D. Only the button color.
 
 A. Ignoring user intent  
 B. Guessing data without sources  
-C. Changing screen brightness only  
+C. Changing a display setting instead of using an AI tool  
 D. Searching external information  
 E. Calling a function to complete a task  
 
@@ -96,7 +96,7 @@ E. Calling a function to complete a task
 A. An action tool  
 B. Information extraction  
 C. Model evaluation  
-D. Choose a model only because it has the largest name recognition.  
+D. Choose a model based on popularity instead of task fit.  
 
 **Answer:** A  
 **Rationale:** The scenario points to the unit capability described by the correct option.
@@ -107,9 +107,9 @@ D. Choose a model only because it has the largest name recognition.
 
 A. Image resolution only  
 B. Phoneme cadence  
-C. Keyboard shortcut  
+C. Developer productivity shortcut  
 D. Tool definition  
-E. Tool call for this scenario  
+E. Tool call capability  
 F. Tool result  
 
 **Answer:** D, E, F  
@@ -119,10 +119,10 @@ F. Tool result
 
 ### 10. Which description best matches "knowledge tool"?
 
-A. Use image analysis even when the input is only plain text.  
-B. Store sensitive data without reviewing privacy requirements.  
-C. a tool that retrieves information from sources such as search or files as described in this unit  
-D. Skip testing because AI outputs are always deterministic.  
+A. Use a visual analysis capability when the input is only text.  
+B. Handle sensitive data without the required access controls.  
+C. tool that retrieves information from sources such as search or files  
+D. Rely on one successful trial instead of broader evaluation.  
 
 **Answer:** C  
 **Rationale:** The correct answer paraphrases how the unit explains "knowledge tool".

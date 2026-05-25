@@ -14,7 +14,7 @@ C. playground
 D. Microsoft Foundry  
 
 **Answer:** D  
-**Rationale:** This scenario matches Microsoft Foundry as described in the unit.
+**Rationale:** The requirement matches the unit capability named in the correct option.
 
 ---
 
@@ -45,7 +45,7 @@ D. Object detection
 ### 4. How does the model catalog differ from the playground?
 
 A. The catalog helps select models; the playground helps test model interactions.  
-B. The catalog sends email, while the playground stores firewall rules.  
+B. The catalog manages deployed endpoint traffic, while the playground stores firewall rules.  
 C. The playground is only for billing.  
 D. Both features are unrelated to model development.  
 
@@ -56,10 +56,10 @@ D. Both features are unrelated to model development.
 
 ### 5. What should a learner remember about "project"?
 
-A. a process for changing the visual theme of the development portal  
-B. a manual-only activity that does not use an AI model  
-C. a security shortcut that removes the need for access controls  
-D. a workspace for organizing AI development assets and collaboration as described in this unit  
+A. a configuration task for the interface rather than the AI behavior  
+B. a rule-based process that does not use model reasoning  
+C. an access-control setting rather than the concept being defined  
+D. a workspace that organizes AI development assets and collaboration  
 
 **Answer:** D  
 **Rationale:** "project" is tested by recognizing its purpose, not by memorizing wording from the page.
@@ -81,7 +81,7 @@ D. Projects prevent model deployment.
 ### 7. Which two activities are supported in Microsoft Foundry? Choose two.
 
 A. Manually grading exams  
-B. Changing monitor brightness  
+B. Changing a display setting instead of testing a model  
 C. Replacing privacy review  
 D. Exploring models  
 E. Testing prompts  
@@ -96,7 +96,7 @@ E. Testing prompts
 A. The playground  
 B. Information extraction  
 C. Model evaluation  
-D. Choose a model only because it has the largest name recognition.  
+D. Choose a model based on popularity instead of task fit.  
 
 **Answer:** A  
 **Rationale:** The scenario points to the unit capability described by the correct option.
@@ -109,8 +109,8 @@ A. Phone dial tone
 B. Spreadsheet cell color only  
 C. Image compression ratio  
 D. Projects  
-E. Model catalog for this scenario  
-F. Playground for this scenario  
+E. Available model selection list  
+F. Portal testing workspace  
 
 **Answer:** D, E, F  
 **Rationale:** These are central parts of the Foundry workflow introduced in the unit.
@@ -119,10 +119,10 @@ F. Playground for this scenario
 
 ### 10. Which description best matches "model catalog"?
 
-A. Use image analysis even when the input is only plain text.  
-B. Store sensitive data without reviewing privacy requirements.  
-C. a place to discover and select available AI models for this scenario  
-D. Skip testing because AI outputs are always deterministic.  
+A. Use a visual analysis capability when the input is only text.  
+B. Handle sensitive data without the required access controls.  
+C. a catalog for discovering and choosing available AI models  
+D. Rely on one successful trial instead of broader evaluation.  
 
 **Answer:** C  
 **Rationale:** The correct answer paraphrases how the unit explains "model catalog".

@@ -14,7 +14,7 @@ C. misuse
 D. Mapping potential harms  
 
 **Answer:** D  
-**Rationale:** This scenario matches Map potential harms as described in the unit.
+**Rationale:** The requirement matches the unit capability named in the correct option.
 
 ---
 
@@ -33,7 +33,7 @@ D. how different groups may be helped or harmed by the solution
 ### 3. A team considers how different user groups could be affected by an AI assistant. Which concept applies?
 
 A. Object detection  
-B. Stakeholder impact for this scenario  
+B. Stakeholder impact capability  
 C. harm category  
 D. Prompt engineering  
 
@@ -56,10 +56,10 @@ D. They are the same step and require no review.
 
 ### 5. What should a learner remember about "stakeholder impact"?
 
-A. a process for changing the visual theme of the development portal  
-B. a manual-only activity that does not use an AI model  
-C. a security shortcut that removes the need for access controls  
-D. how different groups may be helped or harmed by the solution as described in this unit  
+A. a configuration task for the interface rather than the AI behavior  
+B. a rule-based process that does not use model reasoning  
+C. an access-control setting rather than the concept being defined  
+D. potential ways groups may be helped or harmed by the solution  
 
 **Answer:** D  
 **Rationale:** "stakeholder impact" is tested by recognizing its purpose, not by memorizing wording from the page.
@@ -80,7 +80,7 @@ D. Only developers can identify user impact.
 
 ### 7. Which two questions help map potential harms? Choose two.
 
-A. What color is the portal header?  
+A. Which portal page was opened first?  
 B. Can we skip monitoring?  
 C. How can we hide limitations?  
 D. Who could be affected by the system?  
@@ -93,7 +93,7 @@ E. How could the system be misused?
 
 ### 8. Users might ask a model to generate prohibited advice outside the approved purpose. What risk is this?
 
-A. Misuse for this scenario  
+A. Misuse capability  
 B. Speech synthesis  
 C. Information extraction  
 D. Model evaluation  
@@ -105,7 +105,7 @@ D. Model evaluation
 
 ### 9. Which three harm areas should teams consider? Choose three.
 
-A. Keyboard color  
+A. Portal navigation setting  
 B. Window position  
 C. File extension style only  
 D. Fairness  
@@ -119,10 +119,10 @@ F. Safety
 
 ### 10. Which description best matches "misuse"?
 
-A. Skip testing because AI outputs are always deterministic.  
-B. Use image analysis even when the input is only plain text.  
-C. using the system in a way that was not intended and may cause harm as described in this unit  
-D. Choose a model only because it has the largest name recognition.  
+A. Rely on one successful trial instead of broader evaluation.  
+B. Use a visual analysis capability when the input is only text.  
+C. use of the system in a way that was not intended and may cause harm  
+D. Choose a model based on popularity instead of task fit.  
 
 **Answer:** C  
 **Rationale:** The correct answer paraphrases how the unit explains "misuse".
